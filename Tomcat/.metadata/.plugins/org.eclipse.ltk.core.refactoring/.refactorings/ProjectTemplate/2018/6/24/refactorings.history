@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ProjectTemplate/src/main/webapp/WEB-INF/views/internApp/index.jsp&apos; to &apos;app.jsp&apos;" description="Rename resource &apos;index.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/views/internApp/index.jsp" name="app.jsp" stamp="1528840873722" updateReferences="true"/>
+</session>

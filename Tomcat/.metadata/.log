@@ -1,341 +1,758 @@
-!SESSION 2018-06-13 18:22:38.325 -----------------------------------------------
-eclipse.buildId=4.7.3.M20180330-0640
+!SESSION 2018-06-12 15:07:42.619 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
 java.version=1.8.0_171
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.javascript.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.javascript.product
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
 
-!ENTRY org.eclipse.egit.ui 2 0 2018-06-13 18:23:26.222
+!ENTRY org.eclipse.egit.ui 2 0 2018-06-12 15:08:24.882
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\Jordan'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-!SESSION 2018-06-13 18:30:46.137 -----------------------------------------------
-eclipse.buildId=4.7.3.M20180330-0640
-java.version=1.8.0_171
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.javascript.product -product org.eclipse.epp.package.javascript.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.javascript.product -data file:/C:/Users/Jordan/Desktop/Internship/Tomcat/ -product org.eclipse.epp.package.javascript.product
-
-!ENTRY org.eclipse.jface 2 0 2018-06-13 18:30:56.189
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-13 18:30:56.189
-!MESSAGE A conflict occurred for ALT+SHIFT+D R:
-Binding(ALT+SHIFT+D R,
-	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
-		Debug the current selection on a server,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@509d999c,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+D R,
-	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
-		Debug RAP Application,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@12544a50,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-13 18:30:56.189
-!MESSAGE A conflict occurred for ALT+SHIFT+X R:
-Binding(ALT+SHIFT+X R,
-	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
-		Run the current selection on a server,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@125df632,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+X R,
-	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
-		Run RAP Application,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b472cad,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.egit.ui 2 0 2018-06-13 18:31:12.510
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\Jordan'. If this is
+user global configuration and to define the default location to store repositories: 'C:\Users\jts123'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
-!ENTRY org.eclipse.wst.server.discovery 1 0 2018-06-13 18:31:37.276
-!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
-!SESSION 2018-06-13 18:46:50.870 -----------------------------------------------
+!ENTRY org.eclipse.equinox.p2.touchpoint.natives 2 0 2018-06-12 15:11:02.392
+!MESSAGE Could not remove temporary backup directory (it is safe to manually delete it and its contents): C:\Users\jts123\AppData\Local\Temp\epp.package.java_2c7eb3eeb420_92072d01dd50
+!SESSION 2018-06-12 15:11:07.668 -----------------------------------------------
 eclipse.buildId=4.7.3.M20180330-0640
 java.version=1.8.0_171
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.javascript.product -product org.eclipse.epp.package.javascript.product -product org.eclipse.epp.package.javascript.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.javascript.product -product org.eclipse.epp.package.javascript.product -data file:/C:/Users/Jordan/Desktop/Internship/Tomcat/ -product org.eclipse.epp.package.javascript.product
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/C:/Users/jts123/Desktop/Tomcat/ -product org.eclipse.epp.package.java.product
 
-!ENTRY org.eclipse.ui 2 0 2018-06-13 18:47:03.629
-!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
-!SUBENTRY 1 org.eclipse.ui 2 0 2018-06-13 18:47:03.629
-!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+!ENTRY org.eclipse.egit.ui 2 0 2018-06-12 15:11:28.172
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jts123'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
-!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2018-06-13 18:47:11.505
-!MESSAGE /resources/css/dark.css
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2018-06-12 15:18:21.379
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2018-06-12 15:18:21.379
+!MESSAGE Cannot complete the install because some dependencies are not satisfiable
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-06-12 15:18:21.379
+!MESSAGE org.eclipse.linuxtools.callgraph.feature.feature.group [6.2.1.201803061555] cannot be installed in this environment because its filter is not applicable.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2018-06-12 15:18:21.445
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2018-06-12 15:18:21.445
+!MESSAGE Cannot complete the install because some dependencies are not satisfiable
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-06-12 15:18:21.445
+!MESSAGE org.eclipse.linuxtools.callgraph.feature.feature.group [6.2.1.201803061555] cannot be installed in this environment because its filter is not applicable.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2018-06-12 15:18:21.619
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2018-06-12 15:18:21.619
+!MESSAGE Cannot complete the install because some dependencies are not satisfiable
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-06-12 15:18:21.619
+!MESSAGE org.eclipse.linuxtools.callgraph.feature.feature.group [6.2.1.201803061555] cannot be installed in this environment because its filter is not applicable.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2018-06-12 15:18:21.624
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2018-06-12 15:18:21.624
+!MESSAGE Cannot complete the install because some dependencies are not satisfiable
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-06-12 15:18:21.624
+!MESSAGE org.eclipse.linuxtools.callgraph.feature.feature.group [6.2.1.201803061555] cannot be installed in this environment because its filter is not applicable.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-06-12 15:26:18.653
+!MESSAGE Connection to http://mirror.cc.vt.edu/pub/eclipse/releases/oxygen/201804111000/plugins/org.eclipse.emf.facet.efacet.examples.library.core.source_1.2.2.201802191406.jar failed on Connection timed out: connect. Retry attempt 0 started
 !STACK 0
-java.io.FileNotFoundException: /resources/css/dark.css
-	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:49)
-	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:169)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.osgi.storage.url.BundleURLConverter.resolve(BundleURLConverter.java:50)
-	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:229)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.resolve(PlatformURLConverter.java:50)
-	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:229)
-	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:419)
-	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:387)
-	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.restore(ThemeEngine.java:551)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.setCSSTheme(PartRenderingEngine.java:1419)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.initializeStyling(PartRenderingEngine.java:1326)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1043)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
-
-!ENTRY org.eclipse.jface 2 0 2018-06-13 18:47:12.129
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-13 18:47:12.129
-!MESSAGE A conflict occurred for ALT+SHIFT+D R:
-Binding(ALT+SHIFT+D R,
-	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
-		Debug the current selection on a server,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3985522e,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+D R,
-	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
-		Debug RAP Application,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@38c4a0f8,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-13 18:47:12.130
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@650dc592,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@20455f93,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-13 18:47:12.130
-!MESSAGE A conflict occurred for ALT+SHIFT+X R:
-Binding(ALT+SHIFT+X R,
-	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
-		Run the current selection on a server,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@33c26d97,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+X R,
-	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
-		Run RAP Application,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e1cd877,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.jface.text 2 0 2018-06-13 18:47:23.068
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2018-06-13 18:47:23.076
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.egit.ui 2 0 2018-06-13 18:47:26.044
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\Jordan'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-!SESSION 2018-06-13 18:50:14.229 -----------------------------------------------
-eclipse.buildId=4.7.3.M20180330-0640
-java.version=1.8.0_171
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.javascript.product -product org.eclipse.epp.package.javascript.product -product org.eclipse.epp.package.javascript.product -product org.eclipse.epp.package.javascript.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.javascript.product -product org.eclipse.epp.package.javascript.product -product org.eclipse.epp.package.javascript.product -data file:/C:/Users/Jordan/Desktop/Internship/Tomcat/ -product org.eclipse.epp.package.javascript.product
-
-!ENTRY org.eclipse.ui 2 0 2018-06-13 18:50:24.744
-!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
-!SUBENTRY 1 org.eclipse.ui 2 0 2018-06-13 18:50:24.745
-!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
-
-!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2018-06-13 18:50:27.213
-!MESSAGE /resources/css/dark.css
-!STACK 0
-java.io.FileNotFoundException: /resources/css/dark.css
-	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:49)
-	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:169)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.osgi.storage.url.BundleURLConverter.resolve(BundleURLConverter.java:50)
-	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:229)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.resolve(PlatformURLConverter.java:50)
-	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:229)
-	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:419)
-	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:387)
-	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.restore(ThemeEngine.java:551)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.setCSSTheme(PartRenderingEngine.java:1419)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.initializeStyling(PartRenderingEngine.java:1326)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1043)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
-
-!ENTRY org.eclipse.jface 2 0 2018-06-13 18:50:27.848
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-13 18:50:27.848
-!MESSAGE A conflict occurred for ALT+SHIFT+D R:
-Binding(ALT+SHIFT+D R,
-	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
-		Debug the current selection on a server,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@59f0ef6e,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+D R,
-	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
-		Debug RAP Application,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67f25c,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-13 18:50:27.848
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47d7792e,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4eb2a0c2,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-13 18:50:27.848
-!MESSAGE A conflict occurred for ALT+SHIFT+X R:
-Binding(ALT+SHIFT+X R,
-	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
-		Run the current selection on a server,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10e7ade5,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+X R,
-	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
-		Run RAP Application,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2fad48b7,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.egit.ui 2 0 2018-06-13 18:50:33.686
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\Jordan'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.wst.sse.core 4 4 2018-06-13 19:34:08.647
-!MESSAGE can not get a buffer without a document reference
-!STACK 0
-java.lang.IllegalArgumentException: can not get a buffer without a document reference
-	at org.eclipse.wst.sse.core.internal.FileBufferModelManager.getBuffer(FileBufferModelManager.java:689)
-	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.getModelPath(JSPTranslator.java:3279)
-	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.writeExternal(JSPTranslator.java:3386)
-	at java.io.ObjectOutputStream.writeExternalData(Unknown Source)
-	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
-	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
-	at java.io.ObjectOutputStream.writeObject(Unknown Source)
-	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslator(JSPTranslatorPersister.java:263)
-	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslation(JSPTranslatorPersister.java:147)
-	at org.eclipse.jst.jsp.core.internal.java.search.JSPIndexManager.performAction(JSPIndexManager.java:126)
-	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$1.run(AbstractIndexManager.java:1544)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$ResourceEventProcessingJob.run(AbstractIndexManager.java:1542)
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
 
-!ENTRY org.eclipse.jface.text 2 0 2018-06-13 19:34:45.858
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-06-12 15:26:18.814
+!MESSAGE Connection to http://mirror.cc.vt.edu/pub/eclipse/releases/oxygen/201804111000/plugins/org.eclipse.emf.facet.efacet.examples.library.metamodel_1.2.2.201802191406.jar.pack.gz failed on Connection timed out: connect. Retry attempt 0 started
+!STACK 0
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-06-12 15:26:18.847
+!MESSAGE Connection to http://mirror.cc.vt.edu/pub/eclipse/releases/oxygen/201804111000/plugins/org.eclipse.emf.facet.efacet.examples.library.metamodel.edit_1.2.2.201802191406.jar.pack.gz failed on Connection timed out: connect. Retry attempt 0 started
+!STACK 0
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-06-12 15:27:46.402
+!MESSAGE Connection to http://mirror.cc.vt.edu/pub/eclipse/releases/oxygen/201804111000/plugins/org.eclipse.emf.transaction_1.9.0.201706061339.jar failed on Connection timed out: connect. Retry attempt 0 started
+!STACK 0
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-06-12 15:27:46.524
+!MESSAGE Connection to http://mirror.cc.vt.edu/pub/eclipse/releases/oxygen/201804111000/plugins/org.eclipse.emf.transaction.doc_1.4.0.201706061339.jar failed on Connection timed out: connect. Retry attempt 0 started
+!STACK 0
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-06-12 15:27:46.835
+!MESSAGE Connection to http://mirror.cc.vt.edu/pub/eclipse/releases/oxygen/201804111000/features/org.eclipse.emf.transaction.doc_1.11.0.201706061339.jar failed on Connection timed out: connect. Retry attempt 0 started
+!STACK 0
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2018-06-12 15:57:34.148 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data file:/C:/Users/jts123/Desktop/Tomcat/ -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-06-12 15:57:46.731
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jts123'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-06-12 15:58:17.951
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-06-12 15:59:39.577
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.buildship.core 2 0 2018-06-12 16:08:39.908
+!MESSAGE Synchronize Gradle projects with workspace failed due to an unsupported configuration in the referenced Gradle build.
+!STACK 0
+org.eclipse.buildship.core.UnsupportedConfigurationException: Project at 'C:\Users\jts123\Desktop\Tomcat\projecttemplate' can't be named 'ProjectTemplate' because it's located directly under the workspace root. If such a project is renamed, Eclipse would move the container directory. To resolve this problem, move the project out of the workspace root or configure it to have the name 'projecttemplate'.
+	at org.eclipse.buildship.core.workspace.internal.DefaultWorkspaceOperations.validateProjectName(DefaultWorkspaceOperations.java:183)
+	at org.eclipse.buildship.core.workspace.internal.ProjectNameUpdater.checkProjectName(ProjectNameUpdater.java:107)
+	at org.eclipse.buildship.core.workspace.internal.ProjectNameUpdater.ensureProjectNameIsFree(ProjectNameUpdater.java:71)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.addExistingEclipseProjectToWorkspace(SynchronizeGradleBuildOperation.java:278)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeNonWorkspaceProject(SynchronizeGradleBuildOperation.java:268)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeGradleProjectWithWorkspaceProject(SynchronizeGradleBuildOperation.java:179)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$000(SynchronizeGradleBuildOperation.java:99)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$1.run(SynchronizeGradleBuildOperation.java:134)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeProjectsWithWorkspace(SynchronizeGradleBuildOperation.java:131)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.run(SynchronizeGradleBuildOperation.java:115)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.synchronizeBuild(SynchronizeGradleBuildsJob.java:85)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.runToolingApiJob(SynchronizeGradleBuildsJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob$1.run(ToolingApiJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiInvoker.invoke(ToolingApiInvoker.java:62)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob.run(ToolingApiJob.java:70)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.buildship.core 2 0 2018-06-12 16:13:12.425
+!MESSAGE Synchronize Gradle projects with workspace failed due to an unsupported configuration in the referenced Gradle build.
+!STACK 0
+org.eclipse.buildship.core.UnsupportedConfigurationException: Project at 'C:\Users\jts123\Desktop\Tomcat\projecttemplate' can't be named 'ProjectTemplate' because it's located directly under the workspace root. If such a project is renamed, Eclipse would move the container directory. To resolve this problem, move the project out of the workspace root or configure it to have the name 'projecttemplate'.
+	at org.eclipse.buildship.core.workspace.internal.DefaultWorkspaceOperations.validateProjectName(DefaultWorkspaceOperations.java:183)
+	at org.eclipse.buildship.core.workspace.internal.ProjectNameUpdater.checkProjectName(ProjectNameUpdater.java:107)
+	at org.eclipse.buildship.core.workspace.internal.ProjectNameUpdater.ensureProjectNameIsFree(ProjectNameUpdater.java:71)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.addExistingEclipseProjectToWorkspace(SynchronizeGradleBuildOperation.java:278)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeNonWorkspaceProject(SynchronizeGradleBuildOperation.java:268)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeGradleProjectWithWorkspaceProject(SynchronizeGradleBuildOperation.java:179)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$000(SynchronizeGradleBuildOperation.java:99)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$1.run(SynchronizeGradleBuildOperation.java:134)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeProjectsWithWorkspace(SynchronizeGradleBuildOperation.java:131)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.run(SynchronizeGradleBuildOperation.java:115)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.synchronizeBuild(SynchronizeGradleBuildsJob.java:85)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.runToolingApiJob(SynchronizeGradleBuildsJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob$1.run(ToolingApiJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiInvoker.invoke(ToolingApiInvoker.java:62)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob.run(ToolingApiJob.java:70)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.buildship.core 2 0 2018-06-12 16:14:35.199
+!MESSAGE Synchronize Gradle projects with workspace failed due to an unsupported configuration in the referenced Gradle build.
+!STACK 0
+org.eclipse.buildship.core.UnsupportedConfigurationException: Project at 'C:\Users\jts123\Desktop\Tomcat\projecttemplate' can't be named 'ProjectTemplate' because it's located directly under the workspace root. If such a project is renamed, Eclipse would move the container directory. To resolve this problem, move the project out of the workspace root or configure it to have the name 'projecttemplate'.
+	at org.eclipse.buildship.core.workspace.internal.DefaultWorkspaceOperations.validateProjectName(DefaultWorkspaceOperations.java:183)
+	at org.eclipse.buildship.core.workspace.internal.ProjectNameUpdater.checkProjectName(ProjectNameUpdater.java:107)
+	at org.eclipse.buildship.core.workspace.internal.ProjectNameUpdater.ensureProjectNameIsFree(ProjectNameUpdater.java:71)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.addExistingEclipseProjectToWorkspace(SynchronizeGradleBuildOperation.java:278)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeNonWorkspaceProject(SynchronizeGradleBuildOperation.java:268)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeGradleProjectWithWorkspaceProject(SynchronizeGradleBuildOperation.java:179)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$000(SynchronizeGradleBuildOperation.java:99)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$1.run(SynchronizeGradleBuildOperation.java:134)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeProjectsWithWorkspace(SynchronizeGradleBuildOperation.java:131)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.run(SynchronizeGradleBuildOperation.java:115)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.synchronizeBuild(SynchronizeGradleBuildsJob.java:85)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.runToolingApiJob(SynchronizeGradleBuildsJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob$1.run(ToolingApiJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiInvoker.invoke(ToolingApiInvoker.java:62)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob.run(ToolingApiJob.java:70)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.buildship.core 2 0 2018-06-12 16:15:24.130
+!MESSAGE Synchronize Gradle projects with workspace failed due to an unsupported configuration in the referenced Gradle build.
+!STACK 0
+org.eclipse.buildship.core.UnsupportedConfigurationException: Project at 'C:\Users\jts123\Desktop\Tomcat\projecttemplate' can't be named 'ProjectTemplate' because it's located directly under the workspace root. If such a project is renamed, Eclipse would move the container directory. To resolve this problem, move the project out of the workspace root or configure it to have the name 'projecttemplate'.
+	at org.eclipse.buildship.core.workspace.internal.DefaultWorkspaceOperations.validateProjectName(DefaultWorkspaceOperations.java:183)
+	at org.eclipse.buildship.core.workspace.internal.ProjectNameUpdater.checkProjectName(ProjectNameUpdater.java:107)
+	at org.eclipse.buildship.core.workspace.internal.ProjectNameUpdater.ensureProjectNameIsFree(ProjectNameUpdater.java:71)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.addExistingEclipseProjectToWorkspace(SynchronizeGradleBuildOperation.java:278)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeNonWorkspaceProject(SynchronizeGradleBuildOperation.java:268)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeGradleProjectWithWorkspaceProject(SynchronizeGradleBuildOperation.java:179)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$000(SynchronizeGradleBuildOperation.java:99)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$1.run(SynchronizeGradleBuildOperation.java:134)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeProjectsWithWorkspace(SynchronizeGradleBuildOperation.java:131)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.run(SynchronizeGradleBuildOperation.java:115)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.synchronizeBuild(SynchronizeGradleBuildsJob.java:85)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.runToolingApiJob(SynchronizeGradleBuildsJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob$1.run(ToolingApiJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiInvoker.invoke(ToolingApiInvoker.java:62)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob.run(ToolingApiJob.java:70)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2018-06-12 16:19:18.324 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data file:/C:/Users/jts123/Desktop/Tomcat/ -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2018-06-12 16:19:27.384
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-12 16:19:27.384
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@741f8cf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2926144f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-12 16:19:27.385
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1df8ea34,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6b0636d9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-06-12 16:19:36.968
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jts123'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-06-12 16:25:41.477 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data file:/C:/Users/jts123/Desktop/Tomcat/ -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2018-06-12 16:25:53.671
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-06-12 16:25:53.671
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2018-06-12 16:25:58.985
+!MESSAGE /resources/css/dark.css
+!STACK 0
+java.io.FileNotFoundException: /resources/css/dark.css
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:49)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:169)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.osgi.storage.url.BundleURLConverter.resolve(BundleURLConverter.java:50)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:229)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.resolve(PlatformURLConverter.java:50)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:229)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:419)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:387)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.restore(ThemeEngine.java:551)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.setCSSTheme(PartRenderingEngine.java:1419)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.initializeStyling(PartRenderingEngine.java:1326)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1043)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.jface 2 0 2018-06-12 16:25:59.719
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-12 16:25:59.719
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e1a8f48,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6d5bcb2d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-12 16:25:59.719
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3f49429f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67f1c057,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-12 16:25:59.719
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1deb632e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2edac11d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-12 16:26:05.985
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
 
-!ENTRY org.eclipse.jface.text 2 0 2018-06-13 19:34:45.890
+!ENTRY org.eclipse.jface.text 2 0 2018-06-12 16:26:06.001
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
 
-!ENTRY org.eclipse.jface.text 2 0 2018-06-13 20:29:34.142
+!ENTRY org.eclipse.egit.ui 2 0 2018-06-12 16:26:09.071
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jts123'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-12 16:42:47.095
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
 
-!ENTRY org.eclipse.jface.text 2 0 2018-06-13 20:29:34.196
+!ENTRY org.eclipse.jface.text 2 0 2018-06-12 16:42:47.102
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
 
-!ENTRY org.eclipse.jface.text 2 0 2018-06-13 20:29:34.241
+!ENTRY org.eclipse.jface.text 2 0 2018-06-12 16:45:32.322
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
 
-!ENTRY org.eclipse.jface.text 2 0 2018-06-13 20:29:34.248
+!ENTRY org.eclipse.jface.text 2 0 2018-06-12 16:45:32.329
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-12 16:45:32.358
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-12 16:45:32.365
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2018-06-13 15:37:54.505 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2018-06-13 15:38:01.514
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-06-13 15:38:01.514
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2018-06-13 15:38:03.369
+!MESSAGE /resources/css/dark.css
+!STACK 0
+java.io.FileNotFoundException: /resources/css/dark.css
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:49)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:169)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.osgi.storage.url.BundleURLConverter.resolve(BundleURLConverter.java:50)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:229)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.resolve(PlatformURLConverter.java:50)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:229)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:419)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:387)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.restore(ThemeEngine.java:551)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.setCSSTheme(PartRenderingEngine.java:1419)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.initializeStyling(PartRenderingEngine.java:1326)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1043)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.jface 2 0 2018-06-13 15:38:03.853
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-13 15:38:03.853
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@495cac83,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7225583d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-13 15:38:03.853
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5fe7454c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5e92a27,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-13 15:38:03.853
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@297db6ad,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@71c1e70f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-06-13 15:38:10.697
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jts123'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-06-14 14:40:26.834 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2018-06-14 14:40:43.433
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-06-14 14:40:43.433
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2018-06-14 14:40:45.279
+!MESSAGE /resources/css/dark.css
+!STACK 0
+java.io.FileNotFoundException: /resources/css/dark.css
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:49)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:169)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.osgi.storage.url.BundleURLConverter.resolve(BundleURLConverter.java:50)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:229)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.resolve(PlatformURLConverter.java:50)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:229)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:419)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:387)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.restore(ThemeEngine.java:551)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.setCSSTheme(PartRenderingEngine.java:1419)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.initializeStyling(PartRenderingEngine.java:1326)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1043)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.jface 2 0 2018-06-14 14:40:45.779
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-14 14:40:45.779
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1a6ab328,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4e24db00,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-14 14:40:45.779
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3a02172a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@452d4bb2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-06-14 14:40:45.779
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a1143cc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62857555,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-06-14 14:40:52.122
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jts123'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-14 15:43:49.193
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-14 15:43:49.204
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-14 15:43:49.237
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-14 15:43:49.258
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

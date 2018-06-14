@@ -1,7 +1,6 @@
 #Tomcat publish data
-#Wed Jun 13 22:49:39 CDT 2018
-org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\Jordan\\Desktop\\Internship\\Tomcat\\apache-tomcat-8.0.50\\lib\\jasper.jar=C\:\\Users\\Jordan\\Desktop\\Internship\\Tomcat\\apache-tomcat-8.0.50\\webapps\\ProjectTemplate\\WEB-INF\\lib\\jasper.jar
-org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\Jordan\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\5.0.7.RELEASE\\2e04c6c2922fbfa06b5948be14a5782db168b6ec\\spring-web-5.0.7.RELEASE.jar=C\:\\Users\\Jordan\\Desktop\\Internship\\Tomcat\\apache-tomcat-8.0.50\\webapps\\ProjectTemplate\\WEB-INF\\lib\\spring-web-5.0.7.RELEASE.jar
-org.eclipse.jst.j2ee.server\:ProjectTemplate=C\:\\Users\\Jordan\\Desktop\\Internship\\Tomcat\\apache-tomcat-8.0.50\\webapps\\ProjectTemplate
-org.eclipse.jst.jee.server\:groupLab=C\:\\Users\\Jordan\\Desktop\\Internship\\Tomcat\\apache-tomcat-8.0.50\\webapps\\groupLab
-org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\Jordan\\Desktop\\Internship\\Tomcat\\apache-tomcat-8.0.50\\lib\\tomcat-websocket.jar=C\:\\Users\\Jordan\\Desktop\\Internship\\Tomcat\\apache-tomcat-8.0.50\\webapps\\ProjectTemplate\\WEB-INF\\lib\\tomcat-websocket.jar
+#Thu Jun 14 16:45:08 CDT 2018
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\jts123\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\5.0.7.RELEASE\\2e04c6c2922fbfa06b5948be14a5782db168b6ec\\spring-web-5.0.7.RELEASE.jar=C\:\\Users\\jts123\\Desktop\\Tomcat\\apache-tomcat-8.0.50\\webapps\\ProjectTemplate\\WEB-INF\\lib\\spring-web-5.0.7.RELEASE.jar
+org.eclipse.jst.j2ee.server\:ProjectTemplate=C\:\\Users\\jts123\\Desktop\\Tomcat\\apache-tomcat-8.0.50\\webapps\\ProjectTemplate
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\jts123\\Desktop\\Tomcat\\apache-tomcat-8.0.50\\lib\\jasper.jar=C\:\\Users\\jts123\\Desktop\\Tomcat\\apache-tomcat-8.0.50\\webapps\\ProjectTemplate\\WEB-INF\\lib\\jasper.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\jts123\\Desktop\\Tomcat\\apache-tomcat-8.0.50\\lib\\tomcat-websocket.jar=C\:\\Users\\jts123\\Desktop\\Tomcat\\apache-tomcat-8.0.50\\webapps\\ProjectTemplate\\WEB-INF\\lib\\tomcat-websocket.jar
