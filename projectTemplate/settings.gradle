@@ -1,0 +1,2 @@
+//Sonar seems to want this to keep it from naming it 'workspace'
+rootProject.name = 'ProjectTemplate'
