@@ -80,10 +80,8 @@
 			'local/app/script',
 			'dojo/ready'
 		], function (script, ready) {
-			//example.sayHello();
-			script.sayGoodBye();
 			ready(function(){
-				loadInternTable();
+				script.loadInternTable();
 			});
 		});
 	</script>

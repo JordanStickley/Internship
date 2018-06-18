@@ -2,3 +2,16 @@
  * Application specific CSS
  * Make sure to never override default Bootstrap!
  */
+ 
+body {
+	background-color: #FFFFFF;
+	padding-top: 0px;
+}
+
+#marginContainer {
+	margin-top: 42.9px;
+}
+
+.no-padding {
+	padding: 0px;
+}

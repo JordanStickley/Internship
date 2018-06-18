@@ -40,6 +40,11 @@ public class IntroController {
     public String enrollIntern() {
     	return "enrollIntern";
     }
+    
+    @RequestMapping(value = { "app/editIntern" })
+    public String editIntern() {
+    	return "editIntern";
+    }
 
 
 }

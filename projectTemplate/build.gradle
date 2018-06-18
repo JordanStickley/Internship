@@ -30,7 +30,7 @@ sourceSets {
 
 dependencies {
     // Tomcat Libraries -->
-    compile fileTree(dir: 'C:/Users/jordan/Desktop/internship/Tomcat/apache-tomcat-8.0.50/lib', includes: ["*.jar"])
+    compile fileTree(dir: 'C:/cygwin64/home/jts123/Internship/Tomcat/apache-tomcat-8.0.50/lib', includes: ["*.jar"])
     
     // General utils -->
     compile(group: "org.apache.commons", name: "commons-collections4", version: "4.+")

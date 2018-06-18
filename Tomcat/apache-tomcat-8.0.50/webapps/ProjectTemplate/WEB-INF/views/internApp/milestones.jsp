@@ -82,13 +82,16 @@
 	<script>
 		require([
 			'local/app/script',
-			'dojo/ready'
-		], function (example, ready) {
-			//example.sayHello();
-			example.sayGoodBye();
+			'dojo/ready',
+			'dojo/query'
+		],
+		function (script, ready, query) {
 			let milestone = [];
 			ready(function(){
 				createMilestoneElement(milestone);
 			});
+		
+		query('.btn').on('click', saveMilestone);
+			
 		});
 	</script>
