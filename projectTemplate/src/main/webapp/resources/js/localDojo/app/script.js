@@ -44,7 +44,7 @@ function (ready, query, dom, domReady, domConstruct, NodeListManipulate, domProp
         		interns.push([teamMemberID, teamMember, average]);
         		localStorage.setItem('interns', JSON.stringify(interns));
         		
-        		let myAlerts = document.getElementById("myAlerts");  
+        	/*	let myAlerts = document.getElementById("myAlerts");  
         		let attClass = document.createAttribute("class");        
         		attClass.value = "alert alert-success";   
         		let attRole = document.createAttribute("role");
@@ -57,7 +57,7 @@ function (ready, query, dom, domReady, domConstruct, NodeListManipulate, domProp
         			attRole.value = "";
         			myAlerts.setAttributeNode(attClass, attRole); 
         			myAlerts.innerHTML = "";
-        		}, 1000);
+        		}, 1000);*/
         		resolve('we did it');
         		reject('you suck');
         		
@@ -138,6 +138,11 @@ function (ready, query, dom, domReady, domConstruct, NodeListManipulate, domProp
     
     return internsApp;
 });
+
+
+//========================== o-alert=================================
+
+
 //========================== INDEX PAGE ==============================
 
 /*{

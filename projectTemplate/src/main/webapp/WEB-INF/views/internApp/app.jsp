@@ -82,6 +82,7 @@
 		], function (script, ready) {
 			ready(function(){
 				script.loadInternTable();
+				
 			});
 		});
 	</script>
