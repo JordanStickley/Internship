@@ -5,16 +5,20 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.data.jpa.repository.support.QueryDslRepositorySupport;
+import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 import org.springframework.stereotype.Repository;
+import org.springframework.ui.Model;
 
-import com.oreillyauto.internshiplabs.domain.QAnimal;
 import com.oreillyauto.projecttemplate.dao.custom.AnimalRepositoryCustom;
 import com.oreillyauto.projecttemplate.domain.Animal;
+import com.oreillyauto.projecttemplate.domain.AnimalClass;
+import com.oreillyauto.projecttemplate.domain.QAnimal;
+import com.oreillyauto.projecttemplate.domain.QAnimalClass;
+import com.oreillyauto.projecttemplate.domain.QContinent;
 import com.querydsl.core.types.OrderSpecifier;
 
 @Repository
-public class AnimalRepositoryImpl extends QueryDslRepositorySupport implements AnimalRepositoryCustom {
+public class AnimalRepositoryImpl extends QuerydslRepositorySupport implements AnimalRepositoryCustom {
 
     private static final String CONTINENT = "continent";
     private static final String DESC = "desc";
@@ -145,5 +149,37 @@ public class AnimalRepositoryImpl extends QueryDslRepositorySupport implements A
     public Long getAnimalCount() {
         return null;
     }
+    
+    @SuppressWarnings("unchecked")
+	@Override
+	public void testRepo(Model model) {
+		
+		try {
+			QAnimalClass animalClassTable = QAnimalClass.animalClass;
+			QAnimal animalTable = QAnimal.animal;
+			QContinent continentTable = QContinent.continent;
+			
+			List<AnimalClass> eurasiaList = (List<AnimalClass>) (Object) getQuerydsl().createQuery()
+					.from(animalClassTable)
+					.innerJoin(animalTable)
+					.on(animalClassTable.className.eq(animalTable.animalClass.className))
+					.innerJoin(continentTable)
+					.on(animalTable.continentName.eq(continentTable.name))
+					.where(
+							animalTable.continentName.eq("Asia")
+					        .or(animalTable.continentName.eq("Europe"))
+						  )
+					.fetch();
+
+			for (AnimalClass animalClass : eurasiaList) {
+				System.out.println("animalClass: " + animalClass);
+			}				
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+    
+}
 
 }

@@ -3,15 +3,15 @@ package com.oreillyauto.projecttemplate.dao.impl;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.data.jpa.repository.support.QueryDslRepositorySupport;
+import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 import org.springframework.stereotype.Repository;
 
-import com.oreillyauto.internshiplabs.domain.QAnimalClass;
 import com.oreillyauto.projecttemplate.dao.custom.AnimalClassRepositoryCustom;
 import com.oreillyauto.projecttemplate.domain.AnimalClass;
+import com.oreillyauto.projecttemplate.domain.QAnimalClass;
 
 @Repository
-public class AnimalClassRepositoryImpl extends QueryDslRepositorySupport implements AnimalClassRepositoryCustom {
+public class AnimalClassRepositoryImpl extends QuerydslRepositorySupport implements AnimalClassRepositoryCustom {
 
     public AnimalClassRepositoryImpl() {
         super(AnimalClass.class);

@@ -4,15 +4,15 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.data.jpa.repository.support.QueryDslRepositorySupport;
+import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 import org.springframework.stereotype.Repository;
 
-import com.oreillyauto.internshiplabs.domain.QContinent;
 import com.oreillyauto.projecttemplate.dao.custom.ContinentRepositoryCustom;
 import com.oreillyauto.projecttemplate.domain.Continent;
+import com.oreillyauto.projecttemplate.domain.QContinent;
 
 @Repository
-public class ContinentRepositoryImpl extends QueryDslRepositorySupport implements ContinentRepositoryCustom {
+public class ContinentRepositoryImpl extends QuerydslRepositorySupport implements ContinentRepositoryCustom {
 
     public ContinentRepositoryImpl() {
         super(Continent.class);

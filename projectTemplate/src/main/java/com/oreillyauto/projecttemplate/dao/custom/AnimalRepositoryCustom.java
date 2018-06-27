@@ -3,6 +3,8 @@ package com.oreillyauto.projecttemplate.dao.custom;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.ui.Model;
+
 import com.oreillyauto.projecttemplate.domain.Animal;
 
 public interface AnimalRepositoryCustom {
@@ -18,4 +20,6 @@ public interface AnimalRepositoryCustom {
     Map<String, Animal> getMatchingAnimals(List<Animal> animalNames);
 
     Long getAnimalCount();
+    
+    void testRepo(Model model);
 }

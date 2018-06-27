@@ -14,4 +14,5 @@ public interface AnimalClassRepositoryCustom {
     Map<String, AnimalClass> getMatchingAnimalClasses(List<AnimalClass> animalClassNames);
 
     Long getAnimalClassCount();
+    
 }
