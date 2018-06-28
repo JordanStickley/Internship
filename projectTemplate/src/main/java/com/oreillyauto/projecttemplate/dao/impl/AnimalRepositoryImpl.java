@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import com.oreillyauto.projecttemplate.dao.custom.AnimalRepositoryCustom;
 import com.oreillyauto.projecttemplate.domain.Animal;
 import com.oreillyauto.projecttemplate.domain.AnimalClass;
+import com.oreillyauto.projecttemplate.domain.Continent;
 import com.oreillyauto.projecttemplate.domain.QAnimal;
 import com.oreillyauto.projecttemplate.domain.QAnimalClass;
 import com.oreillyauto.projecttemplate.domain.QContinent;
@@ -170,10 +171,77 @@ public class AnimalRepositoryImpl extends QuerydslRepositorySupport implements A
 					        .or(animalTable.continentName.eq("Europe"))
 						  )
 					.fetch();
-
+			
 			for (AnimalClass animalClass : eurasiaList) {
 				System.out.println("animalClass: " + animalClass);
-			}				
+			}	
+			
+			//exercise 1
+			List<Continent> contList = (List<Continent>) (Object) getQuerydsl().createQuery()
+					.from(continentTable)
+					.fetch();
+			
+			for (Continent cont: contList) {
+				System.out.println("Continent list: " + cont);
+			}	
+			
+			//exercise 2
+			List<Animal> theAnimals = (List<Animal>) (Object) getQuerydsl().createQuery()
+					.from(animalTable)
+					.fetch();
+			
+			for (Animal ani: theAnimals) {
+				System.out.println("Animal List: " + ani);
+			}
+			
+			//exercise 3
+			List<AnimalClass> animalCable = (List<AnimalClass>) (Object) getQuerydsl().createQuery()
+					.from(animalClassTable)
+					.fetch();
+			for (AnimalClass aniCable: animalCable) {
+				System.out.println("Animal Class Table: " + aniCable);
+			}
+			
+			//exercise 4
+			Continent contList2 = (Continent) (Object) getQuerydsl().createQuery()
+					.from(continentTable)
+					.fetchFirst();
+			
+			System.out.println("Continent list fetchFirst: " + contList2);	
+			
+			//exercise 5
+			Animal theAnimals2 = (Animal) (Object) getQuerydsl().createQuery()
+					.from(animalTable)
+					.fetchFirst();
+			
+			System.out.println("Animal List: " + theAnimals2);
+			
+			//exercise 6
+			AnimalClass animalCable2 = (AnimalClass) (Object) getQuerydsl().createQuery()
+					.from(animalClassTable)
+					.fetchFirst();
+	
+			System.out.println(animalCable2);
+			
+			//exercise 7
+			/*List<AnimalClass> animalCable3 = (List<AnimalClass>) (Object) getQuerydsl().createQuery()
+					.from(animalClassTable)
+					 .where(animalClassTable.hasHair = 'Y'(
+						        new JPASubQuery().from(d).unique(d.employees.size().max())
+					.orderBy(animalClassTable.className.desc())
+					.fetch();
+			for (AnimalClass aniCable: animalCable3) {
+				System.out.println("Animal Class desc Table: " + aniCable);
+			}*/
+			
+			//exercise 8
+			List<AnimalClass> animalCable3 = (List<AnimalClass>) (Object) getQuerydsl().createQuery()
+					.from(animalClassTable)
+					.orderBy(animalClassTable.className.desc())
+					.fetch();
+			for (AnimalClass aniCable: animalCable3) {
+				System.out.println("Animal Class desc Table: " + aniCable);
+			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -181,5 +249,18 @@ public class AnimalRepositoryImpl extends QuerydslRepositorySupport implements A
 
     
 }
+    
+/*    EXERCISE
+    Select all Continents and print them
+    Select all Animals and print them
+    Select all Animal Classes and print them
+    Select one continent
+    Select one animal
+    Select one animal class
+    Build a query that implements a subquery - print the results.
+    Build a query that returns a list and sort the list in descending order - print the results.
+*/
 
+    
+    
 }

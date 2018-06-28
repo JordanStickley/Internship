@@ -21,7 +21,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.oreillyauto.internshiplabs.dao", entityManagerFactoryRef = "embeddedEntityManagerFactory",
+@EnableJpaRepositories(basePackages = "com.oreillyauto.projecttemplate.dao", entityManagerFactoryRef = "embeddedEntityManagerFactory",
         transactionManagerRef = "embeddedTransactionManager")
 public class SpringJDBCConfiguration {
 

@@ -46,5 +46,9 @@
 	<definition name="nav" extends=".default">
 		<put-attribute name="body" value="/WEB-INF/views/internApp/nav.jsp" />
 	</definition>
+	
+	<definition name="queryDslExample" extends=".default">
+		<put-attribute name="body" value="/WEB-INF/views/database/test.jsp" />
+	</definition>
 
 </tiles-definitions>

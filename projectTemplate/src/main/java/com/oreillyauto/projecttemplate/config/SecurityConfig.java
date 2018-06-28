@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(final WebSecurity web) {
-        web.ignoring().antMatchers("/resources/**", "/index", "/animal/**", "/login/", "/javascript/**", "/app/**");
+        web.ignoring().antMatchers("/resources/**", "/index", "/animal/**", "/login/", "/javascript/**", "/database/**", "/app/**");
     }
 
     @Override
