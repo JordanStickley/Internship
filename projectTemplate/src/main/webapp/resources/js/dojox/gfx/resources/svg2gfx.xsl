@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xsl:stylesheet [
 <!ENTITY SupportedElements "svg:a|svg:circle|svg:ellipse|svg:g|svg:image|svg:line|svg:path|svg:polygon|svg:polyline|svg:rect|svg:text|svg:textPath|svg:use">
 ]>
-<!-- This is a complete rewrite of the original svg2gfx.xslt used for testing. -->
-<!--
+This is a complete rewrite of the original svg2gfx.xslt used for testing.
+
 This version supports polygons, polylines, circles, ellipses, rectangles,
 lines, images, text, patterns, linear gradients, radial gradients, transforms
 (although gradient transforms are limited), and more in addition to the
@@ -23,7 +23,7 @@ that is usually right but sometimes wrong.
 
 Questions / comments / bug reports can be sent to Feneric (on Twitter, IRC,
 GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
--->
+
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
         xmlns:svg="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -35,23 +35,23 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	<xsl:output method="text" version="1.0" encoding="UTF-8"/>
 	<xsl:strip-space elements="*"/>
 
-	<!-- We currently need this constant for some transformation calculations. -->
-	<!-- GFX enhancements could obviate it in the future. -->
+	We currently need this constant for some transformation calculations.
+	GFX enhancements could obviate it in the future.
 	<xsl:variable name="degressInRadian" select="57.295779513082322"/>
 	
-	<!-- The following templates process little bits of things that can often occur in multiple contexts -->
+	The following templates process little bits of things that can often occur in multiple contexts
 	
 	<xsl:template name="kill-extra-spaces">
 		<xsl:param name="string"/>
-		<!-- Some don't feel that SVG is verbose enough and thus add extra spaces, which when -->
-		<!-- untreated can look exactly like delimiters in point sets. -->
+		Some don't feel that SVG is verbose enough and thus add extra spaces, which when
+		untreated can look exactly like delimiters in point sets.
 		<xsl:choose>
-			<!-- Hopefully most cases won't have the extra spaces -->
+			Hopefully most cases won't have the extra spaces
 			<xsl:when test="not(contains($string,', '))">
 				<xsl:value-of select="$string"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<!-- We split at comma / space pairs and recursively chop spaces -->
+				We split at comma / space pairs and recursively chop spaces
 				<xsl:call-template name="kill-extra-spaces">
 					<xsl:with-param name="string" select="substring-before($string,', ')"/>
 				</xsl:call-template>
@@ -66,20 +66,20 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	<xsl:template name="arg-processor">
 		<xsl:param name="values"/>
 		<xsl:param name="labels"/>
-		<!-- Recursively chew through the arguments in a traditional CAR / CDR pattern -->
+		Recursively chew through the arguments in a traditional CAR / CDR pattern
 		<xsl:variable name="valuesCdr" select="substring-after($values,',')"/>
-		<!-- We're going "backwards" here to take advantage of tail recursion -->
+		We're going "backwards" here to take advantage of tail recursion
 		<xsl:choose>
 			<xsl:when test="not($valuesCdr)">
-				<!-- handle the final argument -->
+				handle the final argument
 				<xsl:value-of select="$labels"/>
 				<xsl:text>:</xsl:text>
 				<xsl:value-of select="$values"/>
-				<!-- This last trailing comma is needed in the (odd) case of multiple transforms -->
+				This last trailing comma is needed in the (odd) case of multiple transforms
 				<xsl:text>,</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
-				<!-- handle the current argument -->
+				handle the current argument
 				<xsl:value-of select="substring-before($labels,',')"/>
 				<xsl:text>:</xsl:text>
 				<xsl:value-of select="substring-before($values,',')"/>
@@ -96,14 +96,14 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 		<xsl:param name="background"/>
 		<xsl:choose>
 			<xsl:when test="starts-with($background,'url')">
-				<!-- Check if we have a URL (for a gradient or pattern) -->
+				Check if we have a URL (for a gradient or pattern)
 				<xsl:variable name="arguments" select="translate(normalize-space(substring-before(substring-after($background,'('),')')),' ',',')"/>
 				<xsl:call-template name="url-processor">
 					<xsl:with-param name="url" select="$arguments"/>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:otherwise>
-				<!-- We probably have a solid color. -->
+				We probably have a solid color.
 				<xsl:call-template name="color-processor">
 					<xsl:with-param name="color" select="$background"/>
 				</xsl:call-template>
@@ -115,20 +115,20 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 		<xsl:param name="color"/>
 		<xsl:choose>
 			<xsl:when test="starts-with($color,'rgb')">
-				<!-- Check if we have an RGB triple -->
+				Check if we have an RGB triple
 				<xsl:variable name="arguments" select="normalize-space(substring-before(substring-after($color,'('),')'))"/>
 				<xsl:call-template name="rgb-triple-processor">
 					<xsl:with-param name="triple" select="$arguments"/>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:when test="$color='none'">
-				<!-- Check if we have a literal 'none' -->
-				<!-- Literal nones seem to actually map to black in practice -->
+				Check if we have a literal 'none'
+				Literal nones seem to actually map to black in practice
 				<xsl:text>"#000000",</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
-				<!-- This color could either be by name or value.  Either way, we -->
-				<!-- have to ensure that there are no bogus semi-colons. -->
+				This color could either be by name or value.  Either way, we
+				have to ensure that there are no bogus semi-colons.
 				<xsl:text>"</xsl:text>
 				<xsl:value-of select="normalize-space(translate($color,';',' '))"/>
 				<xsl:text>",</xsl:text>
@@ -138,12 +138,12 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 
 	<xsl:template name="point-processor">
 		<xsl:param name="points"/>
-		<!-- Recursively process points in a traditional CAR / CDR pattern -->
+		Recursively process points in a traditional CAR / CDR pattern
 		<xsl:variable name="pointsCdr" select="normalize-space(substring-after($points,' '))"/>
-		<!-- We're going "backwards" here to take advantage of tail recursion -->
+		We're going "backwards" here to take advantage of tail recursion
 		<xsl:choose>
 			<xsl:when test="not($pointsCdr)">
-				<!-- handle the final argument -->
+				handle the final argument
 				<xsl:text>{x:</xsl:text>
 				<xsl:value-of select="substring-before($points,',')"/>
 				<xsl:text>,y:</xsl:text>
@@ -151,7 +151,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 				<xsl:text>},</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
-				<!-- handle the current argument -->
+				handle the current argument
 				<xsl:variable name="pointsCar" select="substring-before($points,' ')"/>
 				<xsl:text>{x:</xsl:text>
 				<xsl:value-of select="substring-before($pointsCar,',')"/>
@@ -167,8 +167,8 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	
 	<xsl:template name="rgb-triple-processor">
 		<xsl:param name="triple"/>
-		<!-- Note that as SVG triples cannot contain alpha values, we hardcode it to be fully opaque -->
-		<!-- This could theoretically be better handled by watching for fill-opacity -->
+		Note that as SVG triples cannot contain alpha values, we hardcode it to be fully opaque
+		This could theoretically be better handled by watching for fill-opacity
 		<xsl:variable name="red" select="substring-before($triple,',')"/>
 		<xsl:variable name="green" select="substring-before(substring-after($triple,concat($red,',')),',')"/>
 		<xsl:variable name="blue" select="substring-after($triple,concat($red,',',$green,','))"/>
@@ -183,18 +183,18 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	
 	<xsl:template name="styles-processor">
 		<xsl:param name="styles"/>
-		<!-- Recursively chew through the styles in a traditional CAR / CDR pattern -->
+		Recursively chew through the styles in a traditional CAR / CDR pattern
 		<xsl:variable name="stylesCdr" select="substring-after($styles,';')"/>
-		<!-- We're going "backwards" here to take advantage of tail recursion -->
+		We're going "backwards" here to take advantage of tail recursion
 		<xsl:choose>
 			<xsl:when test="not($stylesCdr)">
-				<!-- handle the final style -->
+				handle the final style
 				<xsl:attribute name="{normalize-space(substring-before($styles,':'))}">
 					<xsl:value-of select="normalize-space(substring-after($styles,':'))"/>
 				</xsl:attribute>
 			</xsl:when>
 			<xsl:otherwise>
-				<!-- handle the current style -->
+				handle the current style
 				<xsl:variable name="stylesCar" select="substring-before($styles,';')"/>
 				<xsl:attribute name="{normalize-space(substring-before($stylesCar,':'))}">
 					<xsl:value-of select="normalize-space(substring-after($stylesCar,':'))"/>
@@ -208,13 +208,13 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 
 	<xsl:template name="transform-processor">
 		<xsl:param name="transforms"/>
-		<!-- Recursively chew through the transforms in a traditional CAR / CDR pattern -->
+		Recursively chew through the transforms in a traditional CAR / CDR pattern
 		<xsl:variable name="transformsCdr" select="normalize-space(substring-after($transforms,')'))"/>
 		<xsl:variable name="arguments" select="translate(normalize-space(substring-before(substring-after($transforms,'('),')')),' ',',')"/>
 		<xsl:choose>
-			<!-- We only handle simple (i.e. nonoverlapping) chained transforms. -->
-			<!-- This covers most real-world cases, and exceptions are generally -->
-			<!-- hand-generated and can likewise be hand fixed. -->
+			We only handle simple (i.e. nonoverlapping) chained transforms.
+			This covers most real-world cases, and exceptions are generally
+			hand-generated and can likewise be hand fixed.
 			<xsl:when test="starts-with($transforms,'matrix')">
 				<xsl:call-template name="arg-processor">
 					<xsl:with-param name="values" select="$arguments"/>
@@ -222,7 +222,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:when test="starts-with($transforms,'translate')">
-				<!-- If only one argument is provided, it's assumed for both -->
+				If only one argument is provided, it's assumed for both
 				<xsl:choose>
 					<xsl:when test="contains($arguments,',')">
 						<xsl:call-template name="arg-processor">
@@ -239,7 +239,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 				</xsl:choose>
 			</xsl:when>
 			<xsl:when test="starts-with($transforms,'scale')">
-				<!-- If only one argument is provided, it's assumed for both -->
+				If only one argument is provided, it's assumed for both
 				<xsl:choose>
 					<xsl:when test="contains($arguments,',')">
 						<xsl:call-template name="arg-processor">
@@ -256,9 +256,9 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 				</xsl:choose>
 			</xsl:when>
 			<xsl:when test="starts-with($transforms,'rotate')">
-				<!-- Kluge alert - we're redoing a function GFX already provides here because -->
-				<!-- GFX doesn't yet expose it to JSON input. It requires XSLT extensions, too. -->
-				<!-- If you don't have the extensions, comment the following out (bye bye rotate). -->
+				Kluge alert - we're redoing a function GFX already provides here because
+				GFX doesn't yet expose it to JSON input. It requires XSLT extensions, too.
+				If you don't have the extensions, comment the following out (bye bye rotate).
 				<xsl:choose>
 					<xsl:when test="function-available('math:sin') and function-available('math:cos')">
 						<xsl:variable name="sinOfAngle" select="math:sin($arguments div $degressInRadian)"/>
@@ -277,9 +277,9 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 				</xsl:choose>
 			</xsl:when>
 			<xsl:when test="starts-with($transforms,'skewX')">
-				<!-- Kluge alert - we're redoing a function GFX already provides here because -->
-				<!-- GFX doesn't yet expose it to JSON input. It requires XSLT extensions, too. -->
-				<!-- If you don't have the extensions, comment the following out (bye bye skewX). -->
+				Kluge alert - we're redoing a function GFX already provides here because
+				GFX doesn't yet expose it to JSON input. It requires XSLT extensions, too.
+				If you don't have the extensions, comment the following out (bye bye skewX).
 				<xsl:choose>
 					<xsl:when test="function-available('math:tan')">
 						<xsl:variable name="tanOfAngle" select="math:tan($arguments div $degressInRadian)"/>
@@ -296,9 +296,9 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 				</xsl:choose>
 			</xsl:when>
 			<xsl:when test="starts-with($transforms,'skewY')">
-				<!-- Kluge alert - we're redoing a function GFX already provides here because -->
-				<!-- GFX doesn't yet expose it to JSON input. It requires XSLT extensions, too. -->
-				<!-- If you don't have the extensions, comment the following out (bye bye skewY). -->
+				Kluge alert - we're redoing a function GFX already provides here because
+				GFX doesn't yet expose it to JSON input. It requires XSLT extensions, too.
+				If you don't have the extensions, comment the following out (bye bye skewY).
 				<xsl:choose>
 					<xsl:when test="function-available('math:tan')">
 						<xsl:variable name="tanOfAngle" select="math:tan($arguments div $degressInRadian)"/>
@@ -316,7 +316,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 			</xsl:when>
 		</xsl:choose>
 		<xsl:if test="$transformsCdr">
-			<!-- handle the other transforms -->
+			handle the other transforms
 			<xsl:call-template name="transform-processor">
 				<xsl:with-param name="transforms" select="$transformsCdr"/>
 			</xsl:call-template>
@@ -326,7 +326,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	<xsl:template name="url-processor">
 		<xsl:param name="url"/>
 		<xsl:param name="groupAttrs" select="''"/>
-		<!-- We can only handle local references; that's probably all we should get anyway -->
+		We can only handle local references; that's probably all we should get anyway
 		<xsl:if test="starts-with($url,'#')">
 			<xsl:apply-templates select="id(substring-after($url,'#'))">
 				<xsl:with-param name="groupAttrs" select="$groupAttrs"/>
@@ -334,15 +334,15 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 		</xsl:if>
 	</xsl:template>
 
-	<!-- The following templates help with gradient transforms -->
+	The following templates help with gradient transforms
 
-	<!-- We're temporarily supporting a few SVG features that GFX does not currently support. -->
-	<!-- The biggest of these is gradient transforms; when GFX natively supports it all the -->
-	<!-- kluges made to support it here (including all the following code) should be removed. -->
+	We're temporarily supporting a few SVG features that GFX does not currently support.
+	The biggest of these is gradient transforms; when GFX natively supports it all the
+	kluges made to support it here (including all the following code) should be removed.
 	
 	<xsl:template name="gradient-transform-helper">
-		<!-- This nasty little routine helps gradient adjuster and can be -->
-		<!-- removed when GFX gets gradientTransform support. -->
+		This nasty little routine helps gradient adjuster and can be
+		removed when GFX gets gradientTransform support.
 		<xsl:param name="cxa"/>
 		<xsl:param name="cya"/>
 		<xsl:param name="x1a"/>
@@ -365,7 +365,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 				<xsl:text>cy:</xsl:text>
 				<xsl:value-of select="$cy"/>
 				<xsl:text>,</xsl:text>
-				<!-- The results for r here are going to just be approximate -->
+				The results for r here are going to just be approximate
 				<xsl:variable name="r" select="($cx+$cy) div 2"/>
 				<xsl:text>r:</xsl:text>
 				<xsl:value-of select="$r"/>
@@ -392,10 +392,10 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	
 	<xsl:template name="gradient-adjuster">
 		<xsl:param name="node"/>
-		<!-- This code is awful and only meant to serve until GFX gets gradientTransform support. -->
-		<!-- Once GFX does gradientTransforms, the following should be destroyed and forgotten. -->
-		<!-- While this support is better than nothing, it cannot 100% reproduce the effects -->
-		<!-- that true gradientTransform support in GFX could provide. -->
+		This code is awful and only meant to serve until GFX gets gradientTransform support.
+		Once GFX does gradientTransforms, the following should be destroyed and forgotten.
+		While this support is better than nothing, it cannot 100% reproduce the effects
+		that true gradientTransform support in GFX could provide.
 		<xsl:choose>
 			<xsl:when test="starts-with($node/@gradientTransform,'matrix')">
 				<xsl:variable name="args" select="normalize-space(substring-before(substring-after($node/@gradientTransform,'matrix('),')'))"/>
@@ -422,7 +422,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 			</xsl:when>
 			<xsl:when test="starts-with($node/@gradientTransform,'translate')">
 				<xsl:variable name="args" select="normalize-space(substring-before(substring-after($node/@gradientTransform,'translate('),')'))"/>
-				<!-- If only one argument is provided, it's assumed for both -->
+				If only one argument is provided, it's assumed for both
 				<xsl:choose>
 					<xsl:when test="contains($args,',')">
 						<xsl:call-template name="gradient-transform-helper">
@@ -460,7 +460,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 			</xsl:when>
 			<xsl:when test="starts-with($node/@gradientTransform,'scale')">
 				<xsl:variable name="args" select="normalize-space(substring-before(substring-after($node/@gradientTransform,'scale('),')'))"/>
-				<!-- If only one argument is provided, it's assumed for both -->
+				If only one argument is provided, it's assumed for both
 				<xsl:choose>
 					<xsl:when test="contains($args,',')">
 						<xsl:call-template name="gradient-transform-helper">
@@ -496,7 +496,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
-			<xsl:otherwise>	<!-- Otherwise it's got to be a rotation -->
+			<xsl:otherwise>	Otherwise it's got to be a rotation
 				<xsl:variable name="args" select="normalize-space(substring-before(substring-after($node/@gradientTransform,'rotate('),')'))"/>
 				<xsl:choose>
 					<xsl:when test="function-available('math:sin') and function-available('math:cos')">
@@ -528,11 +528,11 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 		<xsl:text>,</xsl:text>
 	</xsl:template>
 	
-	<!-- The following templates handle related batches of attributes -->
+	The following templates handle related batches of attributes
 	
 	<xsl:template name="font">
 		<xsl:param name="node"/>
-		<!-- Only include if we have at least some font properties defined -->
+		Only include if we have at least some font properties defined
 		<xsl:if test="$node/@font-style or $node/@font-variant or $node/@font-weight or $node/@font-size or $node/@font-family">
 			<xsl:text>font:{ type:"font",</xsl:text>
 			<xsl:if test="$node/@font-style">
@@ -566,11 +566,11 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 
 	<xsl:template name="stroke">
 		<xsl:param name="node"/>
-		<!-- Only include if we have at least some stroke properties defined -->
+		Only include if we have at least some stroke properties defined
 		<xsl:if test="$node/@stroke or $node/@stroke-width or $node/@stroke-linecap or $node/@stroke-linejoin">
 			<xsl:text>stroke:{</xsl:text>
-			<!-- We don't currently handle stroke-dasharray or stroke-dashoffset -->
-			<!-- Note that while we'll pass stroke background info, GFX won't yet use it. -->
+			We don't currently handle stroke-dasharray or stroke-dashoffset
+			Note that while we'll pass stroke background info, GFX won't yet use it.
 			<xsl:if test="$node/@stroke">
 				<xsl:text>color:</xsl:text>
 				<xsl:call-template name="background-processor">
@@ -593,8 +593,8 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 				<xsl:text>",</xsl:text>
 			</xsl:if>
 			<xsl:choose>
-				<!-- This is really cheesy but better than nothing. -->
-				<!-- We probably ought to match a few specific cases when we can. %FIX% -->
+				This is really cheesy but better than nothing.
+				We probably ought to match a few specific cases when we can. %FIX%
 				<xsl:when test="$node/@stroke-dasharray">
 					<xsl:text>style:"Dash",</xsl:text>
 				</xsl:when>
@@ -608,25 +608,25 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 
 	<xsl:template name="common-attributes">
 		<xsl:param name="node"/>
-		<!-- Pretty much every shape has to handle this same batch of attributes. -->
+		Pretty much every shape has to handle this same batch of attributes.
 		<xsl:apply-templates select="$node/@style"/>
-		<!-- Note that we make no effort to guard against overlapping styles. -->
+		Note that we make no effort to guard against overlapping styles.
 		<xsl:apply-templates select="$node/@fill"/>
 		<xsl:call-template name="stroke">
 			<xsl:with-param name="node" select="$node"/>
 		</xsl:call-template>
 		<xsl:apply-templates select="$node/@transform"/>
-		<!-- Fonts are actually illegal in most shapes, but including them here doesn't -->
-		<!-- really slow things down much and does clean up code a bit for the shapes -->
-		<!-- that do allow them. -->
+		Fonts are actually illegal in most shapes, but including them here doesn't
+		really slow things down much and does clean up code a bit for the shapes
+		that do allow them.
 		<xsl:call-template name="font">
 			<xsl:with-param name="node" select="$node"/>
 		</xsl:call-template>
-		<!-- Ditto for stop-colors. -->
+		Ditto for stop-colors.
 		<xsl:apply-templates select="$node/@stop-color"/>
 	</xsl:template>
 
-	<!-- SVG Attribute Handling -->
+	SVG Attribute Handling
 	
 	<xsl:template match="@id">
 		<xsl:text>name:"</xsl:text>
@@ -635,7 +635,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	</xsl:template>
 	
 	<xsl:template match="@x|@y|@x1|@x2|@y1|@y2|@cx|@cy|@r|@rx|@ry|@fx|@fy|@width|@height|@offset">
-		<!-- Generic attribute followed by comma -->
+		Generic attribute followed by comma
 		<xsl:value-of select="local-name()"/>
 		<xsl:text>:</xsl:text>
 		<xsl:value-of select="."/>
@@ -643,14 +643,14 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	</xsl:template>
 	
 	<xsl:template match="@d">
-		<!-- Used only by path objects; often has tons of extra whitespace -->
+		Used only by path objects; often has tons of extra whitespace
 		<xsl:text>path:"</xsl:text>
 		<xsl:value-of select="normalize-space(.)"/>
 		<xsl:text>",</xsl:text>
 	</xsl:template>
 	
 	<xsl:template match="@fill">
-		<!-- Used by most shapes and can have a URL, a solid color, or "none" -->
+		Used by most shapes and can have a URL, a solid color, or "none"
 		<xsl:if test=". != 'none'">
 			<xsl:text>fill:</xsl:text>
 			<xsl:call-template name="background-processor">
@@ -666,8 +666,8 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	</xsl:template>
 
 	<xsl:template match="@style">
-		<!-- A style property is really a bunch of other properties crammed together. -->
-		<!-- We therefore make a dummy element and process it as normal. -->
+		A style property is really a bunch of other properties crammed together.
+		We therefore make a dummy element and process it as normal.
 		<xsl:variable name="dummy">
 			<dummy>
 				<xsl:call-template name="styles-processor">
@@ -676,8 +676,8 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 			</dummy>
 		</xsl:variable>
 		<xsl:choose>
-			<!-- Using a dummy element requires node-set capability. Straight XSLT 1.0 -->
-			<!-- lacks this, but pretty much every XSLT processor offers it as an extension. -->
+			Using a dummy element requires node-set capability. Straight XSLT 1.0
+			lacks this, but pretty much every XSLT processor offers it as an extension.
 			<xsl:when test="function-available('exsl:node-set')">
 				<xsl:call-template name="common-attributes">
 					<xsl:with-param name="node" select="exsl:node-set($dummy)/dummy"/>
@@ -702,7 +702,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	</xsl:template>
 
 	<xsl:template match="@transform|@gradientTransform">
-		<!-- Several transform types are supported -->
+		Several transform types are supported
 		<xsl:text>transform:{</xsl:text>
 		<xsl:call-template name="transform-processor">
 			<xsl:with-param name="transforms" select="."/>
@@ -713,16 +713,16 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 		</xsl:if>
 	</xsl:template>
 
-	<!-- SVG Element Handling -->
+	SVG Element Handling
 	
 	<xsl:template match="svg:a">
 		<xsl:param name="groupAttrs" select="''"/>
-		<!-- Anchors are actually meaningless to us, but their contents should usually be processed. -->
+		Anchors are actually meaningless to us, but their contents should usually be processed.
 		<xsl:variable name="newGroupAttrs">
 			<xsl:value-of select="$groupAttrs"/>
 			<xsl:apply-templates select="@style"/>
-			<!-- Note that we make no effort to guard against overlapping styles; we just order -->
-			<!-- them to be consistent.  This naive approach will usually, but not always, work. -->
+			Note that we make no effort to guard against overlapping styles; we just order
+			them to be consistent.  This naive approach will usually, but not always, work.
 			<xsl:apply-templates select="@fill"/>
 			<xsl:call-template name="stroke">
 				<xsl:with-param name="node" select="."/>
@@ -769,18 +769,18 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 
 	<xsl:template match="svg:g">
 		<xsl:param name="groupAttrs" select="''"/>
-		<!-- The basic grouping type can contain shapes, other groups, and have a transform -->
+		The basic grouping type can contain shapes, other groups, and have a transform
 		<xsl:text>{</xsl:text>
 		<xsl:apply-templates select="@id"/>
 		<xsl:text>children:[</xsl:text>
-		<!-- Note that GFX does not yet support fills etc. on a group, even though SVG does. -->
-		<!-- It's a planned enhancement though, so when GFX gets the ability to handle these, -->
-		<!-- remove the following ten lines and stop propagating groupAttrs. -->
+		Note that GFX does not yet support fills etc. on a group, even though SVG does.
+		It's a planned enhancement though, so when GFX gets the ability to handle these,
+		remove the following ten lines and stop propagating groupAttrs.
 		<xsl:variable name="newGroupAttrs">
 			<xsl:value-of select="$groupAttrs"/>
 			<xsl:apply-templates select="@style"/>
-			<!-- Note that we make no effort to guard against overlapping styles; we just order -->
-			<!-- them to be consistent.  This naive approach will usually, but not always, work. -->
+			Note that we make no effort to guard against overlapping styles; we just order
+			them to be consistent.  This naive approach will usually, but not always, work.
 			<xsl:apply-templates select="@fill"/>
 			<xsl:call-template name="stroke">
 				<xsl:with-param name="node" select="."/>
@@ -793,11 +793,11 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 		<xsl:if test="not(position()=last())"> 
 			<xsl:text >,</xsl:text> 
 		</xsl:if>
-		<!-- When GFX gets group fills etc., remove the following line and uncomment the ones below. -->
+		When GFX gets group fills etc., remove the following line and uncomment the ones below.
 		<xsl:apply-templates select="@transform"/>
-		<!--<xsl:call-template name="common-attributes">-->
-		<!--	<xsl:with-param name="node" select="."/>-->
-		<!--</xsl:call-template>-->
+		<xsl:call-template name="common-attributes">
+			<xsl:with-param name="node" select="."/>
+		</xsl:call-template>
 		<xsl:text>}</xsl:text>
 		<xsl:if test="not(position()=last())"> 
 			<xsl:text >,</xsl:text> 
@@ -806,9 +806,9 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 
 	<xsl:template match="svg:image">
 		<xsl:param name="groupAttrs" select="''"/>
-		<!-- Note that images must be GIF, JPEG, or PNG. -->
+		Note that images must be GIF, JPEG, or PNG.
 		<xsl:if test="not(parent::pattern)">
-			<!-- When being used as a background pattern we don't want type info. -->
+			When being used as a background pattern we don't want type info.
 			<xsl:text>{</xsl:text>
 			<xsl:apply-templates select="@id"/>
 			<xsl:text>shape:{type:"image",</xsl:text>
@@ -846,12 +846,12 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 
 	<xsl:template match="svg:linearGradient">
 		<xsl:text>{type:"linear",</xsl:text>
-		<!-- Kluge alert - GFX doesn't handle gradientTransforms. We can help in -->
-		<!-- the common case of matrix transforms in user space. Other cases we ignore. -->
-		<!-- Even for this one case the results aren't anywhere near as good as real support in GFX. -->
+		Kluge alert - GFX doesn't handle gradientTransforms. We can help in
+		the common case of matrix transforms in user space. Other cases we ignore.
+		Even for this one case the results aren't anywhere near as good as real support in GFX.
 		<xsl:choose>
-			<!-- Kluge alert - this code is only meant to serve until GFX gets gradientTransform support. -->
-			<!-- Once GFX does gradientTransforms, only the straight apply-templates should be kept. -->
+			Kluge alert - this code is only meant to serve until GFX gets gradientTransform support.
+			Once GFX does gradientTransforms, only the straight apply-templates should be kept.
 			<xsl:when test="starts-with(@gradientTransform,'matrix') and @gradientUnits='userSpaceOnUse'">
 				<xsl:call-template name="gradient-adjuster">
 					<xsl:with-param name="node" select="."/>
@@ -863,10 +863,10 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 		</xsl:choose>
 		<xsl:text>colors:[</xsl:text>
 		<xsl:apply-templates select="svg:stop"/>
-		<!-- Unfortunately GFX doesn't do gradientTransforms. -->
-		<!-- Uncommenting the following would support it here. -->
-		<!-- <xsl:apply-templates select="@x1|@x2|@y1|@y2"/> -->
-		<!-- <xsl:apply-templates select="@gradientTransform"/> -->
+		Unfortunately GFX doesn't do gradientTransforms.
+		Uncommenting the following would support it here.
+		<xsl:apply-templates select="@x1|@x2|@y1|@y2"/>
+		<xsl:apply-templates select="@gradientTransform"/>
 		<xsl:text>]}</xsl:text>
 		<xsl:if test="not(position()=last())"> 
 			<xsl:text >,</xsl:text> 
@@ -876,7 +876,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	<xsl:template match="svg:path">
 		<xsl:param name="groupAttrs" select="''"/>
 		<xsl:if test="not(parent::textpath)">
-			<!-- When being used within a textpath we don't want type info. -->
+			When being used within a textpath we don't want type info.
 			<xsl:text>{</xsl:text>
 			<xsl:apply-templates select="@id"/>
 			<xsl:text>shape:{type:"path",</xsl:text>
@@ -893,7 +893,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	</xsl:template>
 
 	<xsl:template match="svg:pattern">
-		<!-- GFX only seems to handle image pattern type fills, so that's all we do -->
+		GFX only seems to handle image pattern type fills, so that's all we do
 		<xsl:text>{type:"pattern",</xsl:text>
 		<xsl:apply-templates select="@width|@height|@xlink:href"/>
 		<xsl:text>}</xsl:text>
@@ -904,11 +904,11 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 
 	<xsl:template match="svg:polygon|svg:polyline">
 		<xsl:param name="groupAttrs" select="''"/>
-		<!-- Polygons are mostly treated as polylines -->
+		Polygons are mostly treated as polylines
 		<xsl:text>{</xsl:text>
 		<xsl:apply-templates select="@id"/>
 		<xsl:text>shape:{type:"polyline",points:[</xsl:text>
-		<!-- We just have to ensure that endpoints match for a polygon; it's assumed in SVG -->
+		We just have to ensure that endpoints match for a polygon; it's assumed in SVG
 		<xsl:variable name="seminormalizedPoints" select="normalize-space(@points)"/>
 		<xsl:variable name="normalizedPoints">
 			<xsl:call-template name="kill-extra-spaces">
@@ -942,12 +942,12 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 
 	<xsl:template match="svg:radialGradient">
 		<xsl:text>{type:"radial",</xsl:text>
-		<!-- Kluge alert - GFX doesn't handle gradientTransforms. We can help in -->
-		<!-- the common case of matrix transforms in user space. Other cases we ignore. -->
-		<!-- Even for this one case the results aren't anywhere near as good as real support in GFX. -->
+		Kluge alert - GFX doesn't handle gradientTransforms. We can help in
+		the common case of matrix transforms in user space. Other cases we ignore.
+		Even for this one case the results aren't anywhere near as good as real support in GFX.
 		<xsl:choose>
-			<!-- Kluge alert - this code is only meant to serve until GFX gets gradientTransform support. -->
-			<!-- Once GFX does gradientTransforms, only the straight apply-templates should be kept. -->
+			Kluge alert - this code is only meant to serve until GFX gets gradientTransform support.
+			Once GFX does gradientTransforms, only the straight apply-templates should be kept.
 			<xsl:when test="starts-with(@gradientTransform,'matrix') and @gradientUnits='userSpaceOnUse'">
 				<xsl:call-template name="gradient-adjuster">
 					<xsl:with-param name="node" select="."/>
@@ -957,15 +957,15 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 				<xsl:apply-templates select="@cx|@cy|@r"/>
 			</xsl:otherwise>
 		</xsl:choose>
-		<!-- GFX doesn't currently support fx & fy -->
-		<!-- Uncommenting the following would support it here. -->
-		<!-- <xsl:apply-templates select="@fx|@fy"/> -->
+		GFX doesn't currently support fx & fy
+		Uncommenting the following would support it here.
+		<xsl:apply-templates select="@fx|@fy"/>
 		<xsl:text>colors:[</xsl:text>
 		<xsl:apply-templates select="svg:stop"/>
-		<!-- Unfortunately GFX doesn't do gradientTransforms. -->
-		<!-- Uncommenting the following would support it here. -->
-		<!-- <xsl:apply-templates select="@cx|@cy|@r"/> -->
-		<!-- <xsl:apply-templates select="@gradientTransform"/> -->
+		Unfortunately GFX doesn't do gradientTransforms.
+		Uncommenting the following would support it here.
+		<xsl:apply-templates select="@cx|@cy|@r"/>
+		<xsl:apply-templates select="@gradientTransform"/>
 		<xsl:text>]}</xsl:text>
 		<xsl:if test="not(position()=last())"> 
 			<xsl:text >,</xsl:text> 
@@ -979,7 +979,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 		<xsl:text>shape:{type:"rect",</xsl:text>
 		<xsl:apply-templates select="@x|@y|@width|@height"/>
 		<xsl:if test="@rx and @ry">
-			<!-- Do approximate rounded corners if both an rx and ry are present. -->
+			Do approximate rounded corners if both an rx and ry are present.
 			<xsl:variable name="r" select="(@rx+@ry) div 2"/>
 			<xsl:text>r:</xsl:text>
 			<xsl:value-of select="$r"/>
@@ -996,7 +996,7 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	</xsl:template>
 
 	<xsl:template match="svg:stop">
-		<!-- Both gradient types use the same sort of stops -->
+		Both gradient types use the same sort of stops
 		<xsl:text>{</xsl:text>
 		<xsl:apply-templates select="@offset"/>
 		<xsl:text>color:</xsl:text>
@@ -1009,8 +1009,8 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 
 	<xsl:template match="svg:text|svg:textPath">
 		<xsl:param name="groupAttrs" select="''"/>
-		<!-- Support for textPath is not functional as GFX doesn't seem to have a -->
-		<!-- complete serialized form at this time. %FIX% -->
+		Support for textPath is not functional as GFX doesn't seem to have a
+		complete serialized form at this time. %FIX%
 		<xsl:text>{</xsl:text>
 		<xsl:apply-templates select="@id"/>
 		<xsl:choose>
@@ -1024,9 +1024,9 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:otherwise>
-				<!-- Regular text has slightly different attributes -->
+				Regular text has slightly different attributes
 				<xsl:choose>
-					<!-- It's possible for a text element to contain a textpath element. -->
+					It's possible for a text element to contain a textpath element.
 					<xsl:when test="not(textpath)">
 						<xsl:text>shape:{type:"text",text:"</xsl:text>
 						<xsl:apply-templates/>
@@ -1040,8 +1040,8 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 			</xsl:otherwise>
 		</xsl:choose>
 		<xsl:text>},</xsl:text>
-		<!-- Kluge alert - if no fill is defined, GFX won't display anything -->
-		<!-- Our quick fix here is to force a fill of some sort. -->
+		Kluge alert - if no fill is defined, GFX won't display anything
+		Our quick fix here is to force a fill of some sort.
 		<xsl:if test="not(@fill)">
 			<xsl:text>fill:"#000000",</xsl:text>
 		</xsl:if>
@@ -1057,12 +1057,12 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 	
 	<xsl:template match="svg:use">
 		<xsl:param name="groupAttrs" select="''"/>
-		<!-- Use just refers to an existing element, essentially duplicating it. -->
+		Use just refers to an existing element, essentially duplicating it.
 		<xsl:variable name="newGroupAttrs">
 			<xsl:value-of select="$groupAttrs"/>
 			<xsl:apply-templates select="@style"/>
-			<!-- Note that we make no effort to guard against overlapping styles; we just order -->
-			<!-- them to be consistent.  This naive approach will usually, but not always, work. -->
+			Note that we make no effort to guard against overlapping styles; we just order
+			them to be consistent.  This naive approach will usually, but not always, work.
 			<xsl:apply-templates select="@fill"/>
 			<xsl:call-template name="stroke">
 				<xsl:with-param name="node" select="."/>
@@ -1075,11 +1075,11 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 		</xsl:call-template>
 	</xsl:template>
 
-	<!-- The main SVG element itself -->
+	The main SVG element itself
 	
 	<xsl:template match="/svg:svg">
 		<xsl:text>[</xsl:text>
 		<xsl:apply-templates select="&SupportedElements;"/>
 		<xsl:text>]</xsl:text>
 	</xsl:template>
-</xsl:stylesheet>
+</xsl:stylesheet> -->
