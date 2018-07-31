@@ -93,7 +93,6 @@
 			<div class="col-sm-10">
 				<div id="alertManager" data-dojo-id="alertManager"
 					data-dojo-type="oreilly/types/ui/AlertManager"></div>
-
 				<tiles:insertAttribute name="body" />
 			</div>
 		</div>
