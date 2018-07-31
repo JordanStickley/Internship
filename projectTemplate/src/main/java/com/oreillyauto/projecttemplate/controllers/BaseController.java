@@ -38,6 +38,8 @@ public class BaseController {
             trace.append("\r\n\t").append(ste.toString());
         }
         log.error(trace.toString());
+        String error = trace.toString();
+        System.out.println(error);
 
         return "errorPage";
     }
