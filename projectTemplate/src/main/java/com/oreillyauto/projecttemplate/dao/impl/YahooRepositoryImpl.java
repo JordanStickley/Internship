@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport
 import org.springframework.stereotype.Repository;
 
 import com.oreillyauto.projecttemplate.dao.custom.YahooRepositoryCustom;
-import com.oreillyauto.projecttemplate.domain.QYahoo;
-import com.oreillyauto.projecttemplate.domain.Yahoo;
+import com.oreillyauto.projecttemplate.domain.Event;
+import com.oreillyauto.projecttemplate.util.Yahoo;
 
 @Repository
 public class YahooRepositoryImpl extends QuerydslRepositorySupport implements YahooRepositoryCustom {
@@ -19,13 +19,13 @@ public class YahooRepositoryImpl extends QuerydslRepositorySupport implements Ya
        
     @SuppressWarnings("unchecked")
     @Override
-    public List<Yahoo> getYahoo() {
-    	QYahoo yahooTable = QYahoo.yahoo;
+    public List<Event> getEvents() {
+    	/*QEvent yahooTable = QEvent.Event;
 
-		List<Yahoo> yahooList = (List<Yahoo>) (Object) getQuerydsl().createQuery()
+		List<Event> eventList = (List<Event>) (Object) getQuerydsl().createQuery()
                 .from(yahooTable)
                 .fetch();
-        System.out.println(yahooList);
+        System.out.println(eventList);*/
         return null;
 
     }

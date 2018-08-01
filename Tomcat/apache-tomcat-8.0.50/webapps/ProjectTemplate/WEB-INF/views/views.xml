@@ -26,6 +26,10 @@
 	<definition name="addYahoo" extends=".yahooDefault">
 		<put-attribute name="body" value="/WEB-INF/views/yahoo/addYahoo.jsp" />
 	</definition>
+	
+	<definition name="restclient" extends=".default">
+		<put-attribute name="body" value="/WEB-INF/views/yahoo/restClient.jsp" />
+	</definition>
 
 
 </tiles-definitions>

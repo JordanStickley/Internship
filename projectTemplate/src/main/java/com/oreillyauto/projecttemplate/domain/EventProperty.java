@@ -27,8 +27,10 @@ public class EventProperty implements Serializable {
     @Column(name = "PROPERTY_ID", columnDefinition = "BIGINT")
     private BigInteger propertyId;
 
-    @Column(name = "EVENT_ID", columnDefinition = "BIGINT")
-    private BigInteger eventId;
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "EVENT_ID", referencedColumnName = "EVENT_ID", columnDefinition = "BIGINT")
+    private Event event;
 
     @Column(name = "EVENT_KEY", columnDefinition = "TIMESTAMP")
     private Timestamp dateTime;
@@ -36,10 +38,7 @@ public class EventProperty implements Serializable {
     @Column(name = "EVENT_VALUE", columnDefinition = "VARCHAR(164)")
     private String eventValue;
 
-    @JsonIgnore
-    @ManyToOne
-    @JoinColumn(name = "EVENT_ID", referencedColumnName = "EVENT_ID", columnDefinition = "BIGINT")
-    private Event event;
+   
 
     public static long getSerialversionuid() {
         return serialVersionUID;
@@ -53,13 +52,6 @@ public class EventProperty implements Serializable {
         this.propertyId = propertyId;
     }
 
-    public BigInteger getEventId() {
-        return eventId;
-    }
-
-    public void setEventId(BigInteger eventId) {
-        this.eventId = eventId;
-    }
 
     public Timestamp getDateTime() {
         return dateTime;
@@ -88,7 +80,6 @@ public class EventProperty implements Serializable {
     public EventProperty(BigInteger propertyId, BigInteger eventId, Timestamp dateTime, String eventValue, Event event) {
         super();
         this.propertyId = propertyId;
-        this.eventId = eventId;
         this.dateTime = dateTime;
         this.eventValue = eventValue;
         this.event = event;
@@ -96,7 +87,7 @@ public class EventProperty implements Serializable {
 
     @Override
     public String toString() {
-        return "EventProperty [propertyId=" + propertyId + ", eventId=" + eventId + ", dateTime=" + dateTime + ", eventValue=" + eventValue
+        return "EventProperty [propertyId=" + propertyId + ", dateTime=" + dateTime + ", eventValue=" + eventValue
                 + ", event=" + event + "]";
     }
 

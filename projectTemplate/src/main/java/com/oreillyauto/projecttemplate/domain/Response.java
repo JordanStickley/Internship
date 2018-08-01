@@ -1,10 +1,11 @@
-package com.oreillyauto.projecttemplate.domain;
+ package com.oreillyauto.projecttemplate.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Response {
+    
 	public Response() {
 	}
 

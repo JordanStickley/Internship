@@ -2,7 +2,8 @@ package com.oreillyauto.projecttemplate.domain;
 
 import java.util.Arrays;
 
-import javax.naming.spi.DirStateFactory.Result;
+
+
 
 public class RestResponse {
     public RestResponse() {}
