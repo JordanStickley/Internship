@@ -19,6 +19,7 @@
 	<definition name=".yahooDefault" template="/WEB-INF/layouts/yahooLayout.jsp">
 		<put-attribute name="title" value="Yahoo Manager" />
 		<put-attribute name="yahooMenu" value="/WEB-INF/template/yahooMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/template/yahoo.jsp" />	
 	</definition>
 
 

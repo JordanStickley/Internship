@@ -19,7 +19,7 @@
 		<put-attribute name="body" value="/WEB-INF/views/javascript.jsp" />
 	</definition>
 
-	<definition name="yahoo" extends=".default">
+	<definition name="yahoo" extends=".yahooDefault">
 		<put-attribute name="body" value="/WEB-INF/views/yahoo/yahoo.jsp" />
 	</definition>
 
