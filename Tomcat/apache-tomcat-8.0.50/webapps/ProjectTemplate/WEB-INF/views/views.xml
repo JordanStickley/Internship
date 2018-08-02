@@ -19,16 +19,16 @@
 		<put-attribute name="body" value="/WEB-INF/views/javascript.jsp" />
 	</definition>
 
-	<definition name="yahoo" extends=".yahooDefault">
-		<put-attribute name="body" value="/WEB-INF/views/yahoo/yahoo.jsp" />
+	<definition name="lastFm" extends=".lastFmDefault">
+		<put-attribute name="body" value="/WEB-INF/views/lastFm/lastFm.jsp" />
 	</definition>
 
-	<definition name="addYahoo" extends=".yahooDefault">
-		<put-attribute name="body" value="/WEB-INF/views/yahoo/addYahoo.jsp" />
+	<definition name="addLastFm" extends=".lastFmDefault">
+		<put-attribute name="body" value="/WEB-INF/views/lastFm/addLastFm.jsp" />
 	</definition>
 	
 	<definition name="restclient" extends=".default">
-		<put-attribute name="body" value="/WEB-INF/views/yahoo/restClient.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/lastFm/restClient.jsp" />
 	</definition>
 
 

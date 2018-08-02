@@ -22,9 +22,9 @@ public class QEventProperty extends EntityPathBase<EventProperty> {
 
     public static final QEventProperty eventProperty = new QEventProperty("eventProperty");
 
-    public final DateTimePath<java.sql.Timestamp> dateTime = createDateTime("dateTime", java.sql.Timestamp.class);
-
     public final QEvent event;
+
+    public final StringPath eventKey = createString("eventKey");
 
     public final StringPath eventValue = createString("eventValue");
 
