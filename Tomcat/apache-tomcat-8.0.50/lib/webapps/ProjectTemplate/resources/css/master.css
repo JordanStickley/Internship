@@ -1,0 +1,58 @@
+/*
+ * Application specific CSS
+ * Make sure to never override default Bootstrap!
+ */
+
+/*
+ * Application specific CSS
+ * Make sure to never override default Bootstrap!
+ */
+.pageImg {
+	width: 300px;
+}
+
+.bump {
+	padding-left: 5px;
+}
+
+.lp5 { /* left padding */
+	padding-left: 5px;
+}
+
+.rp5 { /* right padding */
+	padding-right: 5px;
+}
+
+.nav li a {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+body {
+	background-color: #FFFFFF;
+	padding-top: 0px;
+}
+
+#marginContainer {
+	margin-top: 42.9px;
+}
+
+.no-padding {
+	padding: 0px;
+}
+
+.widthOneHundred {
+	width: 100%;
+}
+
+.mt10 {
+	margin-top: 10px !important;
+}
+
+.btn {
+	size: 200px;
+}
+
+.active:active {
+	background-color: #428bca;
+}

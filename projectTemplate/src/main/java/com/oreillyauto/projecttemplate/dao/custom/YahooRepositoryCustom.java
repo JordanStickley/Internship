@@ -7,5 +7,7 @@ import com.oreillyauto.projecttemplate.domain.Event;
 public interface YahooRepositoryCustom {
 
     List<Event> getEvents();
+    
+    Event save(Event e);
 
 }

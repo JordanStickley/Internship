@@ -30,6 +30,7 @@ sourceSets {
 
 dependencies {
     // Tomcat Libraries -->
+    compile group: "com.twilio.sdk", name: "twilio", version: "7.22.2"
     compile fileTree(dir: 'C:/cygwin64/home/jts123/FinalProject/Internship/Tomcat/apache-tomcat-8.0.50/lib', includes: ["*.jar"])
     
     // General utils -->

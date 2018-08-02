@@ -1,27 +1,22 @@
  package com.oreillyauto.projecttemplate.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Response {
-    
-	public Response() {
-	}
+    private LovedTrack lovedtracks;
 
-	@JsonProperty("RestResponse")
-	private RestResponse restResponse;
+    public Response() {
 
-	public RestResponse getRestResponse() {
-		return restResponse;
-	}
+    }
 
-	public void setRestResponse(RestResponse restResponse) {
-		this.restResponse = restResponse;
-	}
+    public LovedTrack getLovedtracks() {
+        return lovedtracks;
+    }
 
-	@Override
-	public String toString() {
-		return "Response [RestResponse=" + restResponse + "]";
-	}
+    public void setLovedtracks(LovedTrack lovedtracks) {
+        this.lovedtracks = lovedtracks;
+    }
 }
+
+

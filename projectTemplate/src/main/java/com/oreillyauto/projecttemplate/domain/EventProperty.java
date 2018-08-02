@@ -16,7 +16,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 //@Immutable
-@Table(name = "eventProperties")
+@Table(name = "EVENT_PROPERTIES")
 @Entity
 public class EventProperty implements Serializable {
 
@@ -32,13 +32,11 @@ public class EventProperty implements Serializable {
     @JoinColumn(name = "EVENT_ID", referencedColumnName = "EVENT_ID", columnDefinition = "BIGINT")
     private Event event;
 
-    @Column(name = "EVENT_KEY", columnDefinition = "TIMESTAMP")
-    private Timestamp dateTime;
+    @Column(name = "EVENT_KEY", columnDefinition = "VARCHAR(50)")
+    private String eventKey;
 
     @Column(name = "EVENT_VALUE", columnDefinition = "VARCHAR(164)")
     private String eventValue;
-
-   
 
     public static long getSerialversionuid() {
         return serialVersionUID;
@@ -52,13 +50,12 @@ public class EventProperty implements Serializable {
         this.propertyId = propertyId;
     }
 
-
-    public Timestamp getDateTime() {
-        return dateTime;
+    public String getEventKey() {
+        return eventKey;
     }
 
-    public void setDateTime(Timestamp dateTime) {
-        this.dateTime = dateTime;
+    public void setEventKey(String eventKey) {
+        this.eventKey = eventKey;
     }
 
     public String getEventValue() {
@@ -77,18 +74,22 @@ public class EventProperty implements Serializable {
         this.event = event;
     }
 
-    public EventProperty(BigInteger propertyId, BigInteger eventId, Timestamp dateTime, String eventValue, Event event) {
+    public EventProperty() {
+        
+    }
+    
+    public EventProperty(BigInteger propertyId, Event event, String eventKey, String eventValue) {
         super();
         this.propertyId = propertyId;
-        this.dateTime = dateTime;
-        this.eventValue = eventValue;
         this.event = event;
+        this.eventKey = eventKey;
+        this.eventValue = eventValue;
     }
 
     @Override
     public String toString() {
-        return "EventProperty [propertyId=" + propertyId + ", dateTime=" + dateTime + ", eventValue=" + eventValue
-                + ", event=" + event + "]";
+        return "EventProperty [propertyId=" + propertyId + ", event=" + event + ", eventKey=" + eventKey + ", eventValue=" + eventValue
+                + "]";
     }
 
 }

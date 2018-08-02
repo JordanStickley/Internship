@@ -21,4 +21,9 @@ public class YahooServiceImpl implements YahooService {
         return empList;
     }
 
+    @Override
+    public void save(Event e) {
+        yahooRepository.save(e);   
+    }
+
 }

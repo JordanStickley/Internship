@@ -8,4 +8,5 @@ public interface YahooService {
 
     List<Event> getEvents();
 
+    void save(Event e);
 }   

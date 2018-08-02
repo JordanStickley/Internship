@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name=".default" template="/WEB-INF/layouts/stdLayout.jsp">
+		<put-attribute name="title" value="O'Reilly Automotive Project Template" />
+	</definition>
+
+	<definition name="error" template="/WEB-INF/error.jsp"></definition>
+	<definition name="success" template="/WEB-INF/success.jsp"></definition>
+	<definition name="donothing" template="/WEB-INF/DoNothing.jsp"></definition>
+	<definition name="403" template="/WEB-INF/403.jsp"></definition>
+
+	<definition name="errorPage" extends=".default">
+		<put-attribute name="body" value="/WEB-INF/errorPage.jsp" />
+	</definition>
+
+	<definition name=".yahooDefault" template="/WEB-INF/layouts/yahooLayout.jsp">
+		<put-attribute name="title" value="Yahoo Manager" />
+		<put-attribute name="yahooMenu" value="/WEB-INF/template/yahooMenu.jsp" />
+	</definition>
+
+
+</tiles-definitions>
