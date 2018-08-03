@@ -1,5 +1,6 @@
 package com.oreillyauto.projecttemplate.controllers;
 
+import java.math.BigInteger;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -12,6 +13,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
@@ -34,9 +36,28 @@ public class LastFmController extends BaseController {
     public String getEvent(Model model) throws Exception {
         List<Event> empList = lastFmService.getEvents();
         System.out.println(empList);
-        model.addAttribute("empList", empList);
-        //SmsSender.send("Test", "4174297123");
+        model.addAttribute("empList", empList);      
         return "lastFm";
+    }
+    
+    @ResponseBody
+    @GetMapping(value = { "lastFm/validatePhone/{phone}"})
+    public String validatePhone(@PathVariable String phone, Model model) throws Exception {
+        if (!SmsSender.validate(phone))
+            throw new Exception("Invalid phone type");
+        
+        return "";
+    }
+    
+    @ResponseBody
+    @GetMapping(value = { "lastFm/sendSms/{id}/{phone}"})
+    public String sendSms(@PathVariable BigInteger id, @PathVariable String phone, Model model) throws Exception {
+        Event e = lastFmService.getById(id);
+        String body = "Opticronius loved " + e.getTrackName() + " by " + e.getArtistName() + " on " + e.getLovedDate();
+        SmsSender.send(body.substring(0, body.length() > 160 ? 160 : body.length()), phone);
+        e.setSmsSent(true);
+        lastFmService.save(e);
+        return "";
     }
 
     @ResponseBody

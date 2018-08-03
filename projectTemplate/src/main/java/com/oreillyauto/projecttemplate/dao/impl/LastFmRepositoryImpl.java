@@ -1,6 +1,8 @@
 package com.oreillyauto.projecttemplate.dao.impl;
 
+import java.math.BigInteger;
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -42,6 +44,18 @@ public class LastFmRepositoryImpl extends QuerydslRepositorySupport implements L
             return getEntityManager().merge(e);
         }
         return e;
+    }
+
+
+    @Override
+    public Optional<Event> findById(BigInteger id) {
+        Optional<Event> result = Optional.empty();
+        QEvent lastFmTable = QEvent.event;
+        Event e = (Event) getQuerydsl().createQuery().from(lastFmTable).where(lastFmTable.eventId.eq(id)).fetchOne();
+        if (e != null) {
+            result = Optional.of(e);
+        }      
+        return result;
     }
 
 }

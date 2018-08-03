@@ -56,3 +56,7 @@ body {
 .active:active {
 	background-color: #428bca;
 }
+
+.navTop {
+	margin-top: 58px;
+}

@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(final WebSecurity web) {
-        web.ignoring().antMatchers("/resources/**", "/index", "/login/", "/javascript/**", "/database/**", "/lastFm/**", "/restclient/**");
+        web.ignoring().antMatchers("/resources/**", "/index", "/login/", "/javascript/**", "/database/**", "/restclient/**");
     }
 
     @Override
@@ -32,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordParameter("password")
                 .loginPage("/login/")
                 .loginProcessingUrl("/loginProcess")
-                .defaultSuccessUrl("/home", true)
+                .defaultSuccessUrl("/lastFm", true)
                 .and()
                 .exceptionHandling()
                 .accessDeniedPage("/403")

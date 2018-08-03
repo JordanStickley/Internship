@@ -3,7 +3,8 @@ package com.oreillyauto.projecttemplate.controllers;
 //Install the Java helper library from twilio.com/docs/libraries/java
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
-import com.twilio.type.PhoneNumber;
+import com.twilio.rest.lookups.v1.PhoneNumber;
+
 
 public class SmsSender {
     // Find your Account Sid and Auth Token at twilio.com/console
@@ -13,11 +14,25 @@ public class SmsSender {
     public static void send(String body, String number) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-        Message message = Message.creator(new PhoneNumber("+1"+number), // to
-                                          new PhoneNumber("+14175516383"), // from
+        Message message = Message.creator(new com.twilio.type.PhoneNumber("+1" + number), // to
+                                          new com.twilio.type.PhoneNumber("+14175516383"), // from
                                           body)
                 .create();
 
         System.out.println(message.getSid());
+    }
+
+    public static boolean validate(String n) {
+        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+        
+        PhoneNumber number = PhoneNumber
+                .fetcher(new com.twilio.type.PhoneNumber(n))
+                .setType("carrier")
+                .fetch();
+        
+        String type = number.getCarrier().get("type");
+        System.out.println(type);
+        return type !=null && (type.equalsIgnoreCase("voip") || type.equalsIgnoreCase("mobile"));
+        
     }
 }

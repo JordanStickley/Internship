@@ -1,6 +1,8 @@
 package com.oreillyauto.projecttemplate.service.impl;
 
+import java.math.BigInteger;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +26,13 @@ public class LastFmServiceImpl implements LastFmService {
     @Override
     public void save(Event e) {
         lastFmRepository.save(e);   
+    }
+
+    @Override
+    public Event getById(BigInteger id) {
+        // TODO Auto-generated method stub
+        Optional<Event> response = lastFmRepository.findById(id);
+        return response.isPresent() ? response.get() : null;
     }
 
 }
