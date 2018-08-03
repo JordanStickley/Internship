@@ -30,7 +30,6 @@ public class LastFmServiceImpl implements LastFmService {
 
     @Override
     public Event getById(BigInteger id) {
-        // TODO Auto-generated method stub
         Optional<Event> response = lastFmRepository.findById(id);
         return response.isPresent() ? response.get() : null;
     }

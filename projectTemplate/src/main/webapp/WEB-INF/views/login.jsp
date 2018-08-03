@@ -10,14 +10,16 @@
 			<div class="well">
 				<form action="<c:url value='/loginProcess'/>" method="POST" class="form" data-dojo-type="dijit/form/Form"
 					id="loginForm" name="loginForm">
-					<div class="row">					
+					<div class="row">		
+						<!-- username input -->			
 						<div class="form-group col-sm-5">
 							<label for="" class="control-label">Username: </label> 
 							<input type="text" class="form-control" placeholder="username"
 								   name="username" id="username" data-dojo-id="username"
 								   data-dojo-type="dijit/form/TextBox"
 								   data-dojo-props="required: true">
-						</div>			
+						</div>		
+						<!-- password input -->	
 						<div class="form-group col-sm-5">
 							<label for="" class="control-label">Password: </label> 
 							<input type="password" class="form-control" placeholder="password"
@@ -25,6 +27,7 @@
 								   data-dojo-type="dijit/form/TextBox"
 								   data-dojo-props="required: true">
 						</div>
+						<!-- login button -->
 						<div class="form-group col-sm-2">
 							<button id="basicLoginBtn" class="btn btn-primary btn-form"
 								type="submit" data-dojo-type="oreilly/types/form/Button"

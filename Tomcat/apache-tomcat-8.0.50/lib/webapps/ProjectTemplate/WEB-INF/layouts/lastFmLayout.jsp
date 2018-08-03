@@ -72,7 +72,7 @@
 		}, {
 			name : "local",
 			location : "<c:url value='/resources/js/localDojo'/>"
-		} // Rename this to your local Dojo module folder
+		} 
 		],
 		cacheBust : '${buildNumber}',
 		locale : 'en',
@@ -87,6 +87,7 @@
 <body class="tundra">
 	<div id="bodyContentTile" class="container">
 		<div class="container-fluid">
+		<!-- project template has 1 row with a nav on the left and the main body on the right -->
 			<div class="row">
 				<div class="col-sm-2">
 					<tiles:insertAttribute name="lastFmMenu" />

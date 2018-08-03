@@ -40,6 +40,7 @@ public class LastFmController extends BaseController {
         return "lastFm";
     }
     
+    /*throws exception if not a valid phone type*/
     @ResponseBody
     @GetMapping(value = { "lastFm/validatePhone/{phone}"})
     public String validatePhone(@PathVariable String phone, Model model) throws Exception {
@@ -49,6 +50,7 @@ public class LastFmController extends BaseController {
         return "";
     }
     
+    /*manages the message sent via sms*/
     @ResponseBody
     @GetMapping(value = { "lastFm/sendSms/{id}/{phone}"})
     public String sendSms(@PathVariable BigInteger id, @PathVariable String phone, Model model) throws Exception {
@@ -65,7 +67,8 @@ public class LastFmController extends BaseController {
     public List<Event> getEvents() {
         return lastFmService.getEvents();
     }
-
+    
+    /*insert data from api calls into the database*/
     @Scheduled(initialDelay = 5 * 1000, fixedDelay = 5 * 1000)
     public void getLovedTracks() {
         String serviceUri = "http://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user=opticronius&api_key=03ee79fff5563729bb00cb9b48bf50c0&format=json";
