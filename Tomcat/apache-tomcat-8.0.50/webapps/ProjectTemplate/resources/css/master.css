@@ -60,3 +60,12 @@ body {
 .navTop {
 	margin-top: 58px;
 }
+
+.moveRight {
+	margin-left: 10px;
+}
+
+.longRow {
+	padding-right: 15px;
+    padding-left: 15px;
+}

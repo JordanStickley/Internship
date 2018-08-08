@@ -5,5 +5,7 @@
         <li class="${activeHome}"><a href="<c:url value='/lastFm/' />" class="strong">Home</a>
  
         <li class="${activeAddLastFm}"><a href="https://www.last.fm/tag/news" class="strong">Last.FM News</a></li>
+        
+        <li class="${activeLastFmSales}"><a href="<c:url value='/lastFm/lastFmSales' />" class="strong">Last.FM checkout</a></li>
     </ul>
 </div>

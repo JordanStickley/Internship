@@ -21,6 +21,12 @@
 		<put-attribute name="lastFmMenu" value="/WEB-INF/template/lastFmMenu.jsp" />
 		<put-attribute name="body" value="/WEB-INF/template/lastFm.jsp" />	
 	</definition>
+	
+	<definition name=".carPartsDefault" template="/WEB-INF/layouts/carPartsLayout.jsp">
+		<put-attribute name="title" value="CarParts Manager" />
+		<put-attribute name="carPartsMenu" value="/WEB-INF/template/carPartsMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/template/carParts.jsp" />	
+	</definition>
 
 
 </tiles-definitions>

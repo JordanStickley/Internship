@@ -23,12 +23,20 @@
 		<put-attribute name="body" value="/WEB-INF/views/lastFm/lastFm.jsp" />
 	</definition>
 
-	<definition name="addLastFm" extends=".lastFmDefault">
-		<put-attribute name="body" value="/WEB-INF/views/lastFm/addLastFm.jsp" />
+	<definition name="lastFmSales" extends=".lastFmDefault">
+		<put-attribute name="body" value="/WEB-INF/views/lastFm/lastFmSales.jsp" />
 	</definition>
 	
 	<definition name="restclient" extends=".default">
 		<put-attribute name="body" value="/WEB-INF/views/lastFm/restClient.jsp" />
+	</definition>
+	
+	<definition name="carParts" extends=".carPartsDefault">
+		<put-attribute name="body" value="/WEB-INF/views/carParts/carParts.jsp" />
+	</definition>
+
+	<definition name="carPartsSales" extends=".carPartsDefault">
+		<put-attribute name="body" value="/WEB-INF/views/carParts/carPartsSales.jsp" />
 	</definition>
 
 

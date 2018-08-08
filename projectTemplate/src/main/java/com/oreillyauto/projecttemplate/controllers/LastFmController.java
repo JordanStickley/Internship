@@ -40,6 +40,14 @@ public class LastFmController extends BaseController {
         return "lastFm";
     }
     
+    @GetMapping(value = { "lastFm/lastFmSales" })
+    public String getEvent2(Model model) throws Exception {
+        List<Event> empList = lastFmService.getEvents();
+        System.out.println(empList);
+        model.addAttribute("empList", empList);      
+        return "lastFmSales";
+    }
+    
     /*throws exception if not a valid phone type*/
     @ResponseBody
     @GetMapping(value = { "lastFm/validatePhone/{phone}"})

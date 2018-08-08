@@ -1,9 +1,25 @@
 <%@ include file="/WEB-INF/layouts/include.jsp"%>
+<div id="bam" 
+    data-dojo-id="bam" 
+    data-dojo-type="oreilly/types/ui/AlertManager"
+    data-dojo-props="scroll:true">    
+</div>
+
 
 <div class="row">
-	<h1 class="underline col-sm-12">Last.FM Monitor</h1>
+	<h1 class="underline col-sm-10">Last.FM Monitor</h1>
+	<form action="<c:url value='/logout'/>" method="POST" class="form" data-dojo-type="dijit/form/Form"
+					id="loginForm" name="loginForm">
+		<!-- Log out button -->
+		<div class="form-group col-sm-2">
+			<button id="basicLogoutBtn" class="btn btn-default form-btn"
+				type="submit" data-dojo-type="oreilly/types/form/Button"
+				data-dojo-props="spinOnClick: false">Logout
+			</button>
+		</div>	
+	</form>
 </div>
-	
+
 <div class="row well">
 	<h2 class="col-sm-3">Description</h2>
     <p class="col-sm-12">
@@ -18,7 +34,10 @@
 </div>	
 
 <form action="" class="form" data-dojo-type="dijit/form/Form" id="basicDialogForm">
-	<div class="row"> 		
+	<div class="row">
+		<!-- div to add warning too -->
+		<div id="messages"></div> 		
+		<!-- input area for the sms messages -->
 		<div class="form-group col-sm-3">
 			<label for="" class="control-label">Send Via SMS</label> 
 			<input type="text" class="form-control"
@@ -27,9 +46,10 @@
 				   data-dojo-type="dijit/form/TextBox"
 				   data-dojo-props="required: false">								   			  
 		</div>
+		<!-- button for sending the sms message -->
 		<div class="form-group col-sm-2">
-			<button id="basicFormSubmitBtn" class="btn btn-primary btn-form"
-					type="submit" 
+			<button id="basicSmsSubmitBtn" class="btn btn-primary btn-form"
+					type="button" 
 					data-dojo-type="oreilly/types/form/Button"
 					data-dojo-props="spinOnClick: true">Send
 			</button>
@@ -39,13 +59,12 @@
 	
 <div class="row mt10">
 	<div class="col-sm-12">
-		<div class="table-responsive">
-			<!-- Declare the memory store -->
+		<div class="table-responsive">			
 			<div data-dojo-id="carPartStore" 
 				 data-dojo-type="dojo/store/Memory"
 				 data-dojo-props="data: [], idProperty: 'eventId'">
 			</div>
-			<!-- Build the table (head only) -->
+			<!-- Build the table head by default, only inserting the tbody once there's actual data -->
 			<div id="table-container4" class="span12">
 				<table id="carParts" class="table table-striped table-bordered"
 					   data-dojo-type="oreilly/types/dgrid/PagingGridCheckBox" 
@@ -73,18 +92,81 @@
 <div class="row hidden"></div>
 
 <script type="text/javascript">
-	require([ 'dojo/request', 'dijit/registry', 'dojo/ready' ], function(
-			request, registry, ready) {
-		ready(function() {
-			var grid = registry.byId("carParts");
-			var store = registry.byId("carPartStore");
+
+require([ 'dojo/request', 'dijit/registry', 'dojo/ready', 'dojo/dom-style', 'dojox/timing'], function(
+		request, registry, ready, domStyle) {
+	ready(function() {
+		var grid = registry.byId("carParts");
+		
+		
+		var t = new dojox.timing.Timer(5000);
+		t.onTick = function(){			
 			request('<c:url value="/lastFm/getLastFm" />').then(function(data) {
-				grid.store.setData(JSON.parse(data));
+				var lastFmData = JSON.parse(data);
+				grid.store.setData(lastFmData);
 				grid.refresh();
+				
+				for(var i = 0; i < lastFmData.length; i++) {
+					var obj = lastFmData[i];
+					if (obj.smsSent) {
+						domStyle.set(registry.byId('oap-checkbox-'+obj.eventId+'carParts').domNode, 'display', 'none');
+					}
+				}
 			}, function(err) {
 				console.log("Error: " + err);
 			});
-			grid.refresh();
-		});
+		}
+		t.start();
+		
+		grid.refresh();
+
+		var button = document.querySelector('#basicSmsSubmitBtn');
+
+		button.addEventListener('click', function() {
+			var checkedArray = grid.getChecked();
+			var input = document.querySelector('#phone');
+			var bam = registry.byId('bam');
+			
+			//display success message with 1 second delay to showcase spinners
+			var url = '<c:url value="/lastFm/validatePhone/' +  input.value + '" />';
+			request(url).then(function(data) {
+				for (var i = 0; i < checkedArray.length; i++) {
+					var url = '<c:url value="/lastFm/sendSms/' + checkedArray[i].eventId + '/' +  input.value + '" />';
+					request(url).then(function(data) {
+						setTimeout(function(){ 
+							bam.addSuccess({
+								message : "Your Loved song(s) have been sent!",
+								title : "Success!",
+								cssClass : 'myclass',
+								position : 'messages'
+							});
+							registry.byId('basicSmsSubmitBtn').stopSpinner();
+						}, 1000);
+						
+						//display error for non-whitelisted phone numbers
+					}, function(err) {
+						bam.addError({
+							message : "Message not sent: Opticronius is a cheap-skate and doesn't pay for Twilio.",
+							title : "Error!",
+							cssClass : 'myclass',
+							position : 'messages'
+						});
+						registry.byId('basicSmsSubmitBtn').stopSpinner();
+					});
+				}
+				//display error for non-mobile/voIP phone numbers with 1 second delay to showcase spinners
+			}, function(err) {					
+				bam.addError({
+					message : "Please enter a valid mobile/VoIP phone number only",
+					title : "Error!",
+					cssClass : 'myclass',
+					position : 'messages'
+				});
+				setTimeout(function(){
+					registry.byId('basicSmsSubmitBtn').stopSpinner();
+				}, 1000);
+			});
+		})
 	});
+});
 </script>

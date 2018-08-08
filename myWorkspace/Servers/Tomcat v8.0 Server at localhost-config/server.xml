@@ -111,7 +111,7 @@
 
 				<Context docBase="ProjectTemplate" path="/ProjectTemplate"
 					reloadable="true"
-					source="org.eclipse.jst.j2ee.server:ProjectTemplate" />
+					source="org.eclipse.jst.j2ee.server:ProjectTemplate" />		
 			</Host>
 		</Engine>
 	</Service>
