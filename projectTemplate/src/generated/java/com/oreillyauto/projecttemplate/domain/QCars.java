@@ -7,7 +7,6 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
-import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
@@ -19,8 +18,6 @@ public class QCars extends EntityPathBase<Cars> {
     private static final long serialVersionUID = 1403677684L;
 
     public static final QCars cars = new QCars("cars");
-
-    public final ListPath<CarParts, QCarParts> carPartsList = this.<CarParts, QCarParts>createList("carPartsList", CarParts.class, QCarParts.class, PathInits.DIRECT2);
 
     public final NumberPath<Integer> cYear = createNumber("cYear", Integer.class);
 

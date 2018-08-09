@@ -72,15 +72,15 @@
 					<thead>
 						<tr>
 							<th class="hyperlink"
-								data-dgrid-column='{field: "eventId",name: "eventId"}'>Event Id</th>
+								data-dgrid-column='{field: "partNumber",name: "partNumber"}'>Part Number</th>
 							<th class="hyperlink"
-								data-dgrid-column='{field: "eventDate", name: "eventDate"}'>Event Date</th>
+								data-dgrid-column='{field: "title", name: "title"}'>Title</th>
 							<th class="hyperlink"
-								data-dgrid-column='{field: "lovedDate", name: "LovedDate"}'>Loved Date</th>
+								data-dgrid-column='{field: "line", name: "line"}'>Line</th>
 							<th class="hyperlink"
-								data-dgrid-column='{field: "trackName", name: "trackName"}'>Track Name</th>
+								data-dgrid-column='{field: "price", name: "price"}'>Price</th>
 							<th class="hyperlink"
-								data-dgrid-column='{field: "artistName", name: "artistName"}'>Artist Name</th>
+								data-dgrid-column='{field: "qtyOnHand", name: "qtyOnHand"}'>Quantity On Hand</th>
 						</tr>
 					</thead>
 				</table>
@@ -157,6 +157,7 @@ require([ 'dojo/request', 'dijit/registry', 'dojo/ready', 'dojo/dom-style', 'doj
 				//display error for non-mobile/voIP phone numbers with 1 second delay to showcase spinners
 			}, function(err) {					
 				bam.addError({
+					
 					message : "Please enter a valid mobile/VoIP phone number only",
 					title : "Error!",
 					cssClass : 'myclass',

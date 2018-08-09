@@ -10,7 +10,7 @@ import com.oreillyauto.projecttemplate.dao.FinalWeekRepository;
 import com.oreillyauto.projecttemplate.domain.CarParts;
 import com.oreillyauto.projecttemplate.service.CarPartsService;
 
-@Service("FinalWeekService")
+@Service("CarPartsService")
 public class CarPartsServiceImpl implements CarPartsService {
 
     @Autowired

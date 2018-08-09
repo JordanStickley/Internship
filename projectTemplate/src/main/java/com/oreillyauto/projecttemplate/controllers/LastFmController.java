@@ -10,6 +10,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,6 +33,7 @@ public class LastFmController extends BaseController {
 
     private Event lastEvent;
 
+    /*@PreAuthorize("hasRole('admin')")*/
     @GetMapping(value = { "lastFm" })
     public String getEvent(Model model) throws Exception {
         List<Event> empList = lastFmService.getEvents();

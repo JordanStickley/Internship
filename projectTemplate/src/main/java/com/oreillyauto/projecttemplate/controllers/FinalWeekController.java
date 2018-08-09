@@ -40,14 +40,14 @@ public class FinalWeekController extends BaseController {
     }
     
     /*throws exception if not a valid phone type*/
-    @ResponseBody
+    /*@ResponseBody
     @GetMapping(value = { "carParts/validatePhone/{phone}"})
     public String validatePhone(@PathVariable String phone, Model model) throws Exception {
         if (!SmsSender.validate(phone))
             throw new Exception("Invalid phone type");
         
         return "";
-    }
+    }*/
     
     /*manages the message sent via sms*/
    /* @ResponseBody

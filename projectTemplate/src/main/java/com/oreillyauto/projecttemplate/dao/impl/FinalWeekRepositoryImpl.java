@@ -26,10 +26,10 @@ public class FinalWeekRepositoryImpl extends QuerydslRepositorySupport implement
     public List<CarParts> getCarParts() {
     	QCarParts carPartsTable = QCarParts.carParts;
 
-		List<CarParts> eventList = (List<CarParts>) (Object) getQuerydsl().createQuery()
+		List<CarParts> carPartsList = (List<CarParts>) (Object) getQuerydsl().createQuery()
                 .from(carPartsTable)
                 .fetch();
-        return eventList;
+        return carPartsList;
 
     }
 

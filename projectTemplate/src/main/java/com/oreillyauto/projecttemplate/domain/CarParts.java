@@ -29,11 +29,11 @@ public class CarParts implements Serializable {
     @Column(name = "PART_NUMBER", columnDefinition = "VARCHAR(64)")
     private String partNumber;
 
-    @ManyToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
+    /*@ManyToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
     @JoinTable(name = "Compatibility", joinColumns = {@JoinColumn(name = "vid")}, 
                 inverseJoinColumns = {@JoinColumn(name = "partNumber")})
     private
-    List<Cars> carsList = new ArrayList<>();
+    List<Cars> carsList = new ArrayList<>();*/
     
     @Column(name = "TITLE", columnDefinition = "VARCHAR(50)")
     private String title;
@@ -55,13 +55,13 @@ public class CarParts implements Serializable {
         this.partNumber = partNumber;
     }
 
-    public List<Cars> getCarsList() {
+   /* public List<Cars> getCarsList() {
         return carsList;
     }
 
     public void setCarsList(List<Cars> carsList) {
         this.carsList = carsList;
-    }
+    }*/
 
     public String getTitle() {
         return title;
@@ -102,7 +102,7 @@ public class CarParts implements Serializable {
     public CarParts(String partNumber, List<Cars> carsList, String title, String line, BigDecimal price, Integer qtyOnHand) {
         super();
         this.partNumber = partNumber;
-        this.carsList = carsList;
+       /* this.carsList = carsList;*/
         this.title = title;
         this.line = line;
         this.price = price;
@@ -111,69 +111,9 @@ public class CarParts implements Serializable {
 
     @Override
     public String toString() {
-        return "CarParts [partNumber=" + partNumber + ", carsList=" + carsList + ", title=" + title + ", line=" + line + ", price=" + price
+        return "CarParts [partNumber=" + partNumber + ",  title=" + title + ", line=" + line + ", price=" + price
                 + ", qtyOnHand=" + qtyOnHand + "]";
-    }
-
-   
-
-   
+    }  
     
-    
-    /*public String getTrackName() {
-        for (EventProperty event : getEventPropertyList()) {
-            if (event.getEventKey().equals("TRACK_NAME")) {
-                return event.getEventValue();
-            } 
-        }
-        return "";
-    }
-    
-    public String getLovedDate() {
-        for (EventProperty event : getEventPropertyList()) {
-            if (event.getEventKey().equals("LOVED_DATE")) {
-                return event.getEventValue();
-            } 
-        }
-        return "";
-    }
-    
-    public String getArtistName() {
-        for (EventProperty event : getEventPropertyList()) {
-            if (event.getEventKey().equals("ARTIST_NAME")) {
-                return event.getEventValue();
-            } 
-        }
-        return "";
-    }
-*/
-    /*public Event(BigInteger eventId, Timestamp dateTime, String eventType, Boolean smsSent) {
-        super();
-        this.eventId = eventId;
-        this.dateTime = dateTime;
-        this.eventType = eventType;
-        this.smsSent = smsSent;
-    }
-
-    public Event() {
-        
-    }
-    
-    public Event(int i, Timestamp timestamp, List<EventProperty> events) {
-        // TODO Auto-generated constructor stub
-    }
-
-    @Override
-    public String toString() {
-        return "Events [eventId=" + eventId + ", dateTime=" + dateTime + ", eventType=" + eventType + ", smsSent=" + smsSent + "]";
-    }
-
-    @JsonIgnore
-    public List<EventProperty> getEventPropertyList() {
-        return eventPropertyList;
-    }
-
-    public void setEventPropertyList(List<EventProperty> eventPropertyList) {
-        this.eventPropertyList = eventPropertyList;
-    }*/
+/*    carsList=" + carsList + ",*/
 }

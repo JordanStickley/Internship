@@ -28,11 +28,11 @@ public class Cars implements Serializable {
     @Column(name = "VID", columnDefinition = "VARCHAR(64)")
     private String vid;
 
-    @ManyToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
+   /* @ManyToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
     @JoinTable(name = "Compatibility", joinColumns = {@JoinColumn(name = "partNumber")}, 
                 inverseJoinColumns = {@JoinColumn(name = "vid")})
     private
-    List<CarParts> carPartsList = new ArrayList<>();
+    List<CarParts> carPartsList = new ArrayList<>();*/
     
     @Column(name = "C_YEAR", columnDefinition = "INTEGER")
     private Integer cYear;
@@ -51,13 +51,13 @@ public class Cars implements Serializable {
         this.vid = vid;
     }
 
-    public List<CarParts> getCarPartsList() {
+    /*public List<CarParts> getCarPartsList() {
         return carPartsList;
     }
 
     public void setCarPartsList(List<CarParts> carPartsList) {
         this.carPartsList = carPartsList;
-    }
+    }*/
 
     public Integer getcYear() {
         return cYear;
@@ -90,7 +90,7 @@ public class Cars implements Serializable {
     public Cars(String vid, List<CarParts> carPartsList, Integer cYear, String make, String model) {
         super();
         this.vid = vid;
-        this.carPartsList = carPartsList;
+        /*this.carPartsList = carPartsList;*/
         this.cYear = cYear;
         this.make = make;
         this.model = model;
@@ -98,11 +98,11 @@ public class Cars implements Serializable {
 
     @Override
     public String toString() {
-        return "Cars [vid=" + vid + ", carPartsList=" + carPartsList + ", cYear=" + cYear + ", make=" + make + ", model=" + model + "]";
+        return "Cars [vid=" + vid + ",  cYear=" + cYear + ", make=" + make + ", model=" + model + "]";
     }
 
 
-    
+    /*carPartsList=" + carPartsList + ",*/
 
     
 }
